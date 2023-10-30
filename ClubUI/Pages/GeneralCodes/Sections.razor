@@ -1,0 +1,221 @@
+﻿@page "/sections"
+@using ClubEntities.DataTransferObjects.SectionCodes;
+@using ClubModels.Models.GeneralCodes
+@using ClubModels.Models;
+@using ClubUI.Pages.GeneralCodes.Model;
+@inject HttpClient Http
+@inject IMapper Mapper
+
+<h3>Sections</h3>
+
+<div>
+    <CodeForm EntityName="Section"
+        SelectedEntity="@CVModel.SelectedEntity" 
+        SaveMethod="@FormSubmitted" 
+        MakeNew="@CVModel.MakeNew"
+        CalloutType="@CVModel.CallType"
+        LastSubmitResult="@CVModel.LastSubmitResult"
+    >
+        <ExtraFields>
+            <div class="d-flex align-items-center flex-wrap">
+                <div class="mb-3 mx-3 flex-fill">
+                    <Switch @bind-Value="@CVModel.SelectedEntity.Annual" Label="Annual" />
+                </div>
+                <div class="mb-3 mx-3 flex-fill">
+                    <Switch @bind-Value="@CVModel.SelectedEntity.Improve" Label="Improve" />
+                </div>
+                <div class="mb-3 mx-3 flex-fill">
+                    <Switch @bind-Value="@CVModel.SelectedEntity.IsId" Label="Id" />
+                </div>
+                <div class="mb-3 mx-3 flex-fill">
+                    <Switch @bind-Value="@CVModel.SelectedEntity.Init" Label="Init" />
+                </div>
+                <div class="mb-3 mx-3 flex-fill">
+                    <Switch @bind-Value="@CVModel.SelectedEntity.Office" Label="Office" />
+                </div>
+                <div class="mb-3 mx-3 flex-fill">
+                    <Switch @bind-Value="@CVModel.SelectedEntity.Penalty" Label="Penalty" />
+                </div>
+                <div class="mb-3 mx-3 flex-fill">
+                    <Switch @bind-Value="@CVModel.SelectedEntity.Player" Label="Player" />
+                </div>
+                <div class="mb-3 mx-3 flex-fill">
+                    <Switch @bind-Value="@CVModel.SelectedEntity.Pool" Label="Pool" />
+                </div>
+                <div class="mb-3 mx-3 flex-fill">
+                    <Switch @bind-Value="@CVModel.SelectedEntity.Post" Label="Post" />
+                </div>
+                <div class="mb-3 mx-3 flex-fill">
+                    <Switch @bind-Value="@CVModel.SelectedEntity.Reg" Label="Register" />
+                </div>
+                <div class="mb-3 mx-3 flex-fill">
+                    <Switch @bind-Value="@CVModel.SelectedEntity.River" Label="River" />
+                </div>
+                <div class="mb-3 mx-3 flex-fill">
+                    <Switch @bind-Value="@CVModel.SelectedEntity.Stamp" Label="Stamp" />
+                </div>
+                <div class="mb-3 mx-3 flex-fill">
+                    <Switch @bind-Value="@CVModel.SelectedEntity.Worker" Label="Worker" />
+                </div>
+                <div class="mb-3 mx-3 flex-fill">
+                    <Switch @bind-Value="@CVModel.SelectedEntity.Donation" Label="Donation" />
+                </div>
+                <div class="mb-3 mx-3 flex-fill">
+                    <Switch @bind-Value="@CVModel.SelectedEntity.Maintenance" Label="Maintenance" />
+                </div>
+                <div class="mb-3 mx-3 flex-fill">
+                    <Switch @bind-Value="@CVModel.SelectedEntity.Society" Label="Society" />
+                </div>
+                <div class="mb-3 mx-3 flex-fill">
+                    <Switch @bind-Value="@CVModel.SelectedEntity.ComPenalty" Label="Com Penalty" />
+                </div>
+                <div class="mb-3 mx-3 flex-fill">
+                    <Switch @bind-Value="@CVModel.SelectedEntity.ReserveFee" Label="Reserve Fee" />
+                </div>
+            </div>
+        </ExtraFields>
+    </CodeForm>
+</div>
+<div>
+    <Grid 
+        TItem="SectionCode" 
+        class="table table-hover table-bordered table-striped" 
+        Data="CVModel.Entities" 
+        AllowFiltering="true" 
+        Responsive="true" 
+        AllowRowClick="true" 
+        OnRowClick="OnRowClick"
+        AllowPaging="true"
+        PageSize="20"
+        AllowSorting="true">
+
+        <GridColumn TItem="SectionCode" HeaderText="Code" PropertyName="Code" HeaderTextAlignment="Alignment.Center" SortDirection="@CVModel.CodeSort" SortKeySelector="item => item.Code">
+            @context.Code
+        </GridColumn>
+
+        <GridColumn TItem="SectionCode" HeaderText="Name" PropertyName="Name" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.Name">
+            @context.Name
+        </GridColumn>
+
+        <GridColumn TItem="SectionCode" HeaderText="Annual" PropertyName="Annual" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.Name" FilterTextboxWidth="500">
+            @(context.Annual ? "Related" : "Not Related")
+        </GridColumn>
+
+        <GridColumn TItem="SectionCode" HeaderText="Improve" PropertyName="Improve" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.Name">
+            @(context.Improve ? "Related" : "Not Related")
+        </GridColumn>
+
+        <GridColumn TItem="SectionCode" HeaderText="Id" PropertyName="Id" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.Name">
+            @(context.IsId ? "Related" : "Not Related")
+        </GridColumn>
+
+        <GridColumn TItem="SectionCode" HeaderText="Init" PropertyName="Init" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.Name">
+            @(context.Init ? "Related" : "Not Related")
+        </GridColumn>
+
+        <GridColumn TItem="SectionCode" HeaderText="Office" PropertyName="Office" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.Name">
+            @(context.Office ? "Related" : "Not Related")
+        </GridColumn>
+
+        <GridColumn TItem="SectionCode" HeaderText="Penalty" PropertyName="Penalty" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.Name">
+            @(context.Penalty ? "Related" : "Not Related")
+        </GridColumn>
+
+        <GridColumn TItem="SectionCode" HeaderText="Player" PropertyName="Player" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.Name">
+            @(context.Player ? "Related" : "Not Related")
+        </GridColumn>
+
+        <GridColumn TItem="SectionCode" HeaderText="Pool" PropertyName="Pool" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.Name">
+            @(context.Pool ? "Related" : "Not Related")
+        </GridColumn>
+
+        <GridColumn TItem="SectionCode" HeaderText="Post" PropertyName="Post" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.Name">
+            @(context.Post ? "Related" : "Not Related")
+        </GridColumn>
+
+        <GridColumn TItem="SectionCode" HeaderText="Register" PropertyName="Reg" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.Name">
+            @(context.Reg ? "Related" : "Not Related")
+        </GridColumn>
+
+        <GridColumn TItem="SectionCode" HeaderText="River" PropertyName="River" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.Name">
+            @(context.River ? "Related" : "Not Related")
+        </GridColumn>
+
+        <GridColumn TItem="SectionCode" HeaderText="Stamp" PropertyName="Stamp" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.Name">
+            @(context.Stamp ? "Related" : "Not Related")
+        </GridColumn>
+
+        <GridColumn TItem="SectionCode" HeaderText="Worker" PropertyName="Worker" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.Name">
+            @(context.Worker ? "Related" : "Not Related")
+        </GridColumn>
+
+        <GridColumn TItem="SectionCode" HeaderText="Donation" PropertyName="Donation" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.Name">
+            @(context.Donation ? "Related" : "Not Related")
+        </GridColumn>
+
+        <GridColumn TItem="SectionCode" HeaderText="Maintenance" PropertyName="Maintenance" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.Name">
+            @(context.Maintenance ? "Related" : "Not Related")
+        </GridColumn>
+
+        <GridColumn TItem="SectionCode" HeaderText="Society" PropertyName="Society" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.Name">
+            @(context.Society ? "Related" : "Not Related")
+        </GridColumn>
+
+        <GridColumn TItem="SectionCode" HeaderText="Com Penalty" PropertyName="ComPenalty" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.Name">
+            @(context.ComPenalty ? "Related" : "Not Related")
+        </GridColumn>
+
+        <GridColumn TItem="SectionCode" HeaderText="Reserve Fee" PropertyName="ReserveFee" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.Name">
+            @(context.ReserveFee ? "Related" : "Not Related")
+        </GridColumn>
+
+        <GridColumn TItem="SectionCode" HeaderText="Remove" HeaderTextAlignment="Alignment.Center" Sortable="false" Filterable="false">
+            <div class="d-flex justify-content-center" >
+                <Button Color="ButtonColor.Danger" @onclick="CVModel.OnDeleteVerifyShow"><Icon Name="IconName.TrashFill" ></Icon></Button>
+            </div>
+        </GridColumn>
+
+    </Grid>
+
+</div>
+
+<Modal @ref="CVModel.DeleteVerifyModal" Title="Modal title">
+    <BodyTemplate>
+        Are You Sure You Want To Delete Section
+    </BodyTemplate>
+    <FooterTemplate>
+        <Button Color="ButtonColor.Secondary" @onclick="CVModel.OnDeleteVerifyHide">Close</Button>
+        <Button Color="ButtonColor.Danger" @onclick="DeleteSection">Delete</Button>
+    </FooterTemplate>
+</Modal>
+
+@code {
+    private CodeViewModel<SectionCode, SectionCodeCreateDTO, SectionCodeEditDTO> CVModel = new CodeViewModel<SectionCode, SectionCodeCreateDTO, SectionCodeEditDTO>()
+    {
+        IsNew = true,
+        CodeSort = SortDirection.Ascending,
+        CallType = AlertColor.Danger,
+            APIURL = "api/SectionCodes"
+    };
+
+
+
+    protected async override Task OnInitializedAsync() =>
+        CVModel.Entities = await Http.GetFromJsonAsync<List<SectionCode>>(CVModel.APIURL) ?? new List<SectionCode>();
+
+    private async void OnRowClick(GridRowEventArgs<SectionCode> args)
+        => await CVModel.OnRowClick(args, Mapper);
+
+    private async void DeleteSection()
+    {
+        await CVModel.DeleteEntity(Http); 
+        StateHasChanged();
+    }
+
+    private async void FormSubmitted(EditContext editContext)
+    {
+        await CVModel.FormSubmitted(editContext, Http, Mapper);
+        StateHasChanged();
+    }
+
+}

@@ -1,0 +1,110 @@
+﻿@page "/references"
+@using ClubEntities.DataTransferObjects.ReferenceCodes;
+@using ClubModels.Models.GeneralCodes
+@using ClubModels.Models;
+@using ClubUI.Pages.GeneralCodes.Model;
+@inject HttpClient Http
+@inject IMapper Mapper
+
+<h3>References</h3>
+
+<div>
+    <CodeForm EntityName="Reference"
+        SelectedEntity="@CVModel.SelectedEntity" 
+        SaveMethod="@FormSubmitted" 
+        MakeNew="@CVModel.MakeNew"
+        CalloutType="@CVModel.CallType"
+        LastSubmitResult="@CVModel.LastSubmitResult"
+    >
+        <ExtraFields>
+            <div class="d-flex align-items-center">
+                <div class="mb-3 flex-fill">
+                    <label for="fees" class="form-label">Reference Fees</label>
+                    <NumberInput id="fees" TValue="decimal" @bind-Value="@CVModel.SelectedEntity.ReferenceFee" EnableMinMax="@true" Max="decimal.MaxValue" Min="0" />
+                </div>
+                <div class="mt-3 mx-3 flex-fill">
+                    <Switch @bind-Value="@CVModel.SelectedEntity.AgeFlag" Label="Age Related" />
+                </div>
+            </div>
+        </ExtraFields>
+    </CodeForm>
+</div>
+<div>
+    <Grid 
+        TItem="ReferenceCode" 
+        class="table table-hover table-bordered table-striped" 
+        Data="CVModel.Entities" 
+        AllowFiltering="true" 
+        Responsive="true" 
+        AllowRowClick="true" 
+        OnRowClick="OnRowClick"
+        AllowPaging="true"
+        PageSize="20"
+        AllowSorting="true">
+
+        <GridColumn TItem="ReferenceCode" HeaderText="Code" PropertyName="Code" HeaderTextAlignment="Alignment.Center" SortDirection="@CVModel.CodeSort" SortKeySelector="item => item.Code">
+            @context.Code
+        </GridColumn>
+
+        <GridColumn TItem="ReferenceCode" HeaderText="Name" PropertyName="Name" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.Name">
+            @context.Name
+        </GridColumn>
+
+        <GridColumn TItem="ReferenceCode" HeaderText="Fees" PropertyName="ReferenceFee" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.Name">
+            @context.ReferenceFee
+        </GridColumn>
+
+        <GridColumn TItem="ReferenceCode" HeaderText="Age" PropertyName="AgeFlag" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.Name">
+            @(context.AgeFlag ? "Related" : "Not Related")
+        </GridColumn>
+
+        <GridColumn TItem="ReferenceCode" HeaderText="Remove" HeaderTextAlignment="Alignment.Center" Sortable="false" Filterable="false">
+            <div class="d-flex justify-content-center" >
+                <Button Color="ButtonColor.Danger" @onclick="CVModel.OnDeleteVerifyShow"><Icon Name="IconName.TrashFill" ></Icon></Button>
+            </div>
+        </GridColumn>
+
+    </Grid>
+
+</div>
+
+<Modal @ref="CVModel.DeleteVerifyModal" Title="Modal title">
+    <BodyTemplate>
+        Are You Sure You Want To Delete Reference
+    </BodyTemplate>
+    <FooterTemplate>
+        <Button Color="ButtonColor.Secondary" @onclick="CVModel.OnDeleteVerifyHide">Close</Button>
+        <Button Color="ButtonColor.Danger" @onclick="DeleteReference">Delete</Button>
+    </FooterTemplate>
+</Modal>
+
+@code {
+    private CodeViewModel<ReferenceCode, ReferenceCodeCreateDTO, ReferenceCodeEditDTO> CVModel = new CodeViewModel<ReferenceCode, ReferenceCodeCreateDTO, ReferenceCodeEditDTO>()
+    {
+        IsNew = true,
+        CodeSort = SortDirection.Ascending,
+        CallType = AlertColor.Danger,
+        APIURL = "api/ReferenceCodes"
+    };
+
+
+
+    protected async override Task OnInitializedAsync() =>
+        CVModel.Entities = await Http.GetFromJsonAsync<List<ReferenceCode>>(CVModel.APIURL) ?? new List<ReferenceCode>();
+
+    private async void OnRowClick(GridRowEventArgs<ReferenceCode> args)
+        => await CVModel.OnRowClick(args, Mapper);
+
+    private async void DeleteReference()
+    {
+        await CVModel.DeleteEntity(Http); 
+        StateHasChanged();
+    }
+
+    private async void FormSubmitted(EditContext editContext)
+    {
+        await CVModel.FormSubmitted(editContext, Http, Mapper);
+        StateHasChanged();
+    }
+
+}

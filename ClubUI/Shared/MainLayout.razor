@@ -1,0 +1,66 @@
+﻿@inherits LayoutComponentBase
+
+<div class="bb-page">
+
+    <Sidebar @ref="sidebar"
+             ImageSrc="./ClubIcon.png"
+             Title="The Club"
+             Href="/"
+             DataProvider="SidebarDataProvider" />
+
+    <main>
+        <div class="bb-top-row px-4 d-flex justify-content-between">
+            <Icon Name="IconName.List" role="button" @onclick="ToogleSidebar" />
+            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+        </div>
+
+        <article class="content px-4">
+            <div class="py-2">
+                @Body
+            </div>
+        </article>
+    </main>
+
+</div>
+
+<Modal IsServiceModal="true" />
+<Preload />
+<Toasts class="p-3" AutoHide="true" Delay="4000" Placement="ToastsPlacement.TopRight" />
+
+@code {
+    private Sidebar sidebar = default!;
+    private IEnumerable<NavItem> navItems = default!;
+
+    private async Task<SidebarDataProviderResult> SidebarDataProvider(SidebarDataProviderRequest request)
+    {
+        if (navItems is null)
+            navItems = GetNavItems();
+
+        return await Task.FromResult(request.ApplyTo(navItems));
+    }
+
+    private IEnumerable<NavItem> GetNavItems()
+    {
+        navItems = new List<NavItem>
+        {
+            new NavItem { Id = "1", Href = "/", IconName = IconName.HouseDoorFill, Text = "Home", Match=NavLinkMatch.All},
+            new NavItem { Id = "2", IconName = IconName.GearFill, Text = "General Codes"},
+            new NavItem { Id = "3", IconName = IconName.GeoAlt, Href = "/cities", Text = "Cities", ParentId="2"},
+            new NavItem { Id = "4", IconName = IconName.GenderAmbiguous, Href = "/genders", Text = "Gender", ParentId="2"},
+            new NavItem { Id = "5", IconName = IconName.PersonWorkspace, Href = "/jobs", Text = "Jobs", ParentId="2"},
+            new NavItem { Id = "6", IconName = IconName.People, Href = "/martialstatus", Text = "Martial Status", ParentId="2"},
+            new NavItem { Id = "7", IconName = IconName.PersonVCard, Href = "/memberships", Text = "Membership", ParentId="2"},
+            new NavItem { Id = "8", IconName = IconName.PinMap, Href = "/nationalities", Text = "Nationalities", ParentId="2"},
+            new NavItem { Id = "9", IconName = IconName.PatchCheck, Href = "/qualifications", Text = "Qualifications", ParentId="2"},
+            new NavItem { Id = "10", IconName = IconName.At, Href = "/references", Text = "References", ParentId="2"},
+            new NavItem { Id = "11", IconName = IconName.PlusCircle, Href = "/religions", Text = "Religion", ParentId="2"},
+            new NavItem { Id = "12", IconName = IconName.SignIntersection, Href = "/sections", Text = "Section", ParentId="2"},
+            new NavItem { Id = "13", IconName = IconName.Alt, Href = "/titles", Text = "Titles", ParentId="2"},
+            new NavItem { Id = "14", IconName = IconName.ArrowLeftRight, Href = "/transfers", Text = "Trans Reasons", ParentId="2"},
+        };
+
+        return navItems;
+    }
+
+    private void ToogleSidebar() => sidebar.ToggleSidebar();
+}

@@ -1,0 +1,87 @@
+﻿@page "/jobs"
+@using ClubEntities.DataTransferObjects.JobCodes;
+@using ClubModels.Models.GeneralCodes
+@using ClubModels.Models;
+@using ClubUI.Pages.GeneralCodes.Model;
+@inject HttpClient Http
+@inject IMapper Mapper
+
+<h3>Jobs</h3>
+
+<div>
+    <CodeForm EntityName = "Job"
+              SelectedEntity="@CVModel.SelectedEntity"
+              SaveMethod="@FormSubmitted"
+              MakeNew="@CVModel.MakeNew"
+              CalloutType="@CVModel.CallType"
+              LastSubmitResult="@CVModel.LastSubmitResult"></CodeForm>
+</div>
+
+<div>
+    <Grid 
+        TItem="JobCode" 
+        class="table table-hover table-bordered table-striped" 
+        Data="CVModel.Entities" 
+        AllowFiltering="true" 
+        Responsive="true" 
+        AllowRowClick="true" 
+        OnRowClick="OnRowClick"
+        AllowPaging="true"
+        PageSize="20"
+        AllowSorting="true">
+
+        <GridColumn TItem="JobCode" HeaderText="Code" PropertyName="Code" HeaderTextAlignment="Alignment.Center" SortDirection="@CVModel.CodeSort" SortKeySelector="item => item.Code">
+            @context.Code
+        </GridColumn>
+
+        <GridColumn TItem="JobCode" HeaderText="Name" PropertyName="Name" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.Name">
+            @context.Name
+        </GridColumn>
+
+        <GridColumn TItem="JobCode" HeaderText="Remove" HeaderTextAlignment="Alignment.Center" Sortable="false" Filterable="false">
+            <div class="d-flex justify-content-center" >
+                <Button Color="ButtonColor.Danger" @onclick="CVModel.OnDeleteVerifyShow"><Icon Name="IconName.TrashFill" ></Icon></Button>
+            </div>
+        </GridColumn>
+
+    </Grid>
+
+</div>
+
+<Modal @ref="CVModel.DeleteVerifyModal" Title="Modal title">
+    <BodyTemplate>
+        Are You Sure You Want To Delete Job
+    </BodyTemplate>
+    <FooterTemplate>
+        <Button Color="ButtonColor.Secondary" @onclick="CVModel.OnDeleteVerifyHide">Close</Button>
+        <Button Color="ButtonColor.Danger" @onclick="DeleteJob">Delete</Button>
+    </FooterTemplate>
+</Modal>
+
+@code {
+    private CodeViewModel<JobCode, JobCodeCreateDTO, JobCodeEditDTO> CVModel = new CodeViewModel<JobCode, JobCodeCreateDTO, JobCodeEditDTO>()
+    {
+        IsNew = true,
+        CodeSort = SortDirection.Ascending,
+        CallType = AlertColor.Danger,
+        APIURL = "api/JobCodes"
+    };
+
+    private async void OnRowClick(GridRowEventArgs<JobCode> args)
+        => await CVModel.OnRowClick(args, Mapper);
+
+    protected async override Task OnInitializedAsync() =>
+        CVModel.Entities = await Http.GetFromJsonAsync<List<JobCode>>(CVModel.APIURL) ?? new List<JobCode>();
+
+    private async void FormSubmitted(EditContext editContext)
+    {
+        await CVModel.FormSubmitted(editContext, Http, Mapper);
+        StateHasChanged();
+    }
+
+    private async void DeleteJob()
+    {
+        await CVModel.DeleteEntity(Http);
+        StateHasChanged();
+    }
+}

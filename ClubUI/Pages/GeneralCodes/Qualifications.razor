@@ -1,0 +1,91 @@
+﻿@page "/qualifications"
+@using ClubEntities.DataTransferObjects.QualificationCodes;
+@using ClubModels.Models.GeneralCodes
+@using ClubModels.Models;
+@using ClubUI.Pages.GeneralCodes.Model;
+@inject HttpClient Http
+@inject IMapper Mapper
+
+<h3>Qualifications</h3>
+
+<div>
+    <CodeForm 
+        EntityName = "Qualification"
+        SelectedEntity="@CVModel.SelectedEntity" 
+        SaveMethod="@FormSubmitted" 
+        MakeNew="@CVModel.MakeNew"
+        CalloutType="@CVModel.CallType"
+        LastSubmitResult="@CVModel.LastSubmitResult"
+    ></CodeForm>
+</div>
+<div>
+    <Grid 
+        TItem="QualificationCode" 
+        class="table table-hover table-bordered table-striped" 
+        Data="CVModel.Entities" 
+        AllowFiltering="true" 
+        Responsive="true" 
+        AllowRowClick="true" 
+        OnRowClick="OnRowClick"
+        AllowPaging="true"
+        PageSize="20"
+        AllowSorting="true">
+
+        <GridColumn TItem="QualificationCode" HeaderText="Code" PropertyName="Code" HeaderTextAlignment="Alignment.Center" SortDirection="@CVModel.CodeSort" SortKeySelector="item => item.Code">
+            @context.Code
+        </GridColumn>
+
+        <GridColumn TItem="QualificationCode" HeaderText="Name" PropertyName="Name" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.Name">
+            @context.Name
+        </GridColumn>
+
+        <GridColumn TItem="QualificationCode" HeaderText="Remove" HeaderTextAlignment="Alignment.Center" Sortable="false" Filterable="false">
+            <div class="d-flex justify-content-center" >
+                <Button Color="ButtonColor.Danger" @onclick="CVModel.OnDeleteVerifyShow"><Icon Name="IconName.TrashFill" ></Icon></Button>
+            </div>
+        </GridColumn>
+
+    </Grid>
+
+</div>
+
+<Modal @ref="CVModel.DeleteVerifyModal" Title="Modal title">
+    <BodyTemplate>
+        Are You Sure You Want To Delete Qualification
+    </BodyTemplate>
+    <FooterTemplate>
+        <Button Color="ButtonColor.Secondary" @onclick="CVModel.OnDeleteVerifyHide">Close</Button>
+        <Button Color="ButtonColor.Danger" @onclick="DeleteQualification">Delete</Button>
+    </FooterTemplate>
+</Modal>
+
+@code {
+    private CodeViewModel<QualificationCode, QualificationCodeCreateDTO, QualificationCodeEditDTO> CVModel = new CodeViewModel<QualificationCode, QualificationCodeCreateDTO, QualificationCodeEditDTO>()
+    {
+        IsNew = true,
+        CodeSort = SortDirection.Ascending,
+        CallType = AlertColor.Danger,
+            APIURL = "api/QualificationCodes"
+    };
+
+
+
+    protected async override Task OnInitializedAsync() =>
+        CVModel.Entities = await Http.GetFromJsonAsync<List<QualificationCode>>(CVModel.APIURL) ?? new List<QualificationCode>();
+
+    private async void OnRowClick(GridRowEventArgs<QualificationCode> args)
+        => await CVModel.OnRowClick(args, Mapper);
+
+    private async void DeleteQualification()
+    {
+        await CVModel.DeleteEntity(Http); 
+        StateHasChanged();
+    }
+
+    private async void FormSubmitted(EditContext editContext)
+    {
+        await CVModel.FormSubmitted(editContext, Http, Mapper);
+        StateHasChanged();
+    }
+
+}

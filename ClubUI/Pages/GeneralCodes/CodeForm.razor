@@ -1,0 +1,57 @@
+﻿@using ClubModels.Models.GeneralCodes
+@using ClubEntities.DataTransferObjects.CityCodes
+@using System.Text;
+@using ClubModels.Models;
+@inject HttpClient Http
+
+<div>
+    @if(LastSubmitResult != null)
+    {
+        <Alert Color="@CalloutType"> @LastSubmitResult </Alert>
+    }
+    
+    <EditForm Model="@SelectedEntity" OnSubmit="@SaveMethod">
+        <DataAnnotationsValidator />
+        <div class="d-flex justify-content-end">
+            <button type="reset" @onclick="MakeNew" class="btn btn-primary align-self-center mx-2">New</button>
+            <button type="submit" class="btn btn-success align-self-center me-2">Submit</button>
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="mb-3 flex-fill">
+                <label for="Code" class="form-label">@EntityName Code</label>
+                <input type="number" class="form-control" id="Code" aria-describedby="codeHelp" @bind-value="SelectedEntity.Code" min="1" max="@int.MaxValue" step="1" required>
+                <div id="codeHelp" class="form-text">This Code Must Ber Unique</div>
+            </div>
+            <div class="mb-3 mx-3 flex-fill">
+                <label for="Name" class="form-label">@EntityName Name</label>
+                <input type="text" class="form-control" id="Name" aria-describedby="nameHelp" @bind-value="SelectedEntity.Name" maxlength="100" required>
+                <div id="nameHelp" class="form-text">Add @EntityName Name</div>
+            </div>
+        </div>
+        @ExtraFields
+    </EditForm>
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment? ExtraFields { get; set; }
+
+    [Parameter, EditorRequired]
+    public string EntityName { get; set; }
+
+    [Parameter, EditorRequired]
+    public Codes SelectedEntity { get; set; }
+
+    [Parameter, EditorRequired]
+    public EventCallback<MouseEventArgs> MakeNew { get; set; }
+
+    [Parameter, EditorRequired]
+    public EventCallback<EditContext> SaveMethod { get; set; }
+
+    [Parameter, EditorRequired]
+    public string LastSubmitResult { get; set; }
+
+    [Parameter, EditorRequired]
+    public AlertColor CalloutType { get; set; }
+
+}

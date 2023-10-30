@@ -1,0 +1,56 @@
+2023-10-30 04:56:11.2642 ERROR No ClubModels.Models.GeneralCodes.GenderCode Code With Id : fd0307d7-efad-4f8a-8f7c-08dbd8f10020 Exist In The Database
+2023-10-30 04:56:56.6866 ERROR No ClubModels.Models.GeneralCodes.GenderCode Code With Id : fd0307d7-efad-4f8a-8f7c-08dbd8f10020 Exist In The Database
+2023-10-30 04:59:58.3436 ERROR No ClubModels.Models.GeneralCodes.GenderCode Code With Id : fd0307d7-efad-4f8a-8f7c-08dbd8f10020 Exist In The Database
+2023-10-30 05:49:22.0208 ERROR No ClubModels.Models.GeneralCodes.JobCode Code With Id : d64e7384-66b4-4a04-aaf7-08dbd8fb1c40 Exist In The Database
+2023-10-30 05:50:02.6975 ERROR No ClubModels.Models.GeneralCodes.JobCode Code With Id : d64e7384-66b4-4a04-aaf7-08dbd8fb1c40 Exist In The Database
+2023-10-30 07:31:39.9986 ERROR No ClubModels.Models.GeneralCodes.MartialStatusCode Code With Id : 593652d7-838f-43b3-56b1-08dbd9096d90 Exist In The Database
+2023-10-30 07:32:15.4891 ERROR No ClubModels.Models.GeneralCodes.MartialStatusCode Code With Id : 593652d7-838f-43b3-56b1-08dbd9096d90 Exist In The Database
+2023-10-30 07:42:47.2342 ERROR No ClubModels.Models.GeneralCodes.MembershipCode Code With Id : 6ceac202-488d-40e6-fdde-08dbd90af770 Exist In The Database
+2023-10-30 07:43:08.1558 ERROR No ClubModels.Models.GeneralCodes.MembershipCode Code With Id : 6ceac202-488d-40e6-fdde-08dbd90af770 Exist In The Database
+2023-10-30 07:50:36.0932 ERROR No ClubModels.Models.GeneralCodes.NationalityCode Code With Id : e5465431-1513-4508-4c5d-08dbd90bfb30 Exist In The Database
+2023-10-30 07:51:05.2442 ERROR No ClubModels.Models.GeneralCodes.NationalityCode Code With Id : e5465431-1513-4508-4c5d-08dbd90bfb30 Exist In The Database
+2023-10-30 08:44:25.1251 ERROR No ClubModels.Models.GeneralCodes.QualificationCode Code With Id : 2d2c6e9c-24ec-4915-4bc7-08dbd9139400 Exist In The Database
+2023-10-30 08:44:58.1845 ERROR No ClubModels.Models.GeneralCodes.QualificationCode Code With Id : 2d2c6e9c-24ec-4915-4bc7-08dbd9139400 Exist In The Database
+2023-10-30 09:32:35.7421 ERROR No ClubModels.Models.GeneralCodes.ReferenceCode Code With Id : 5e3d0d83-2397-4902-4bff-08dbd919c020 Exist In The Database
+2023-10-30 09:34:12.5336 ERROR No ClubModels.Models.GeneralCodes.ReferenceCode Code With Id : 5e3d0d83-2397-4902-4bff-08dbd919c020 Exist In The Database
+2023-10-30 10:35:44.9840 ERROR No ClubModels.Models.GeneralCodes.ReligionCode Code With Id : c0d3f51f-e341-4b6d-b1b9-08dbd9231c70 Exist In The Database
+2023-10-30 10:36:43.7786 ERROR No ClubModels.Models.GeneralCodes.ReligionCode Code With Id : c0d3f51f-e341-4b6d-b1b9-08dbd9231c70 Exist In The Database
+2023-10-30 10:44:25.9205 ERROR No ClubModels.Models.GeneralCodes.TitleCode Code With Id : fe9c5775-5574-4fa8-19a6-08dbd9245960 Exist In The Database
+2023-10-30 10:44:52.2059 ERROR No ClubModels.Models.GeneralCodes.TitleCode Code With Id : fe9c5775-5574-4fa8-19a6-08dbd9245960 Exist In The Database
+2023-10-30 10:53:37.2813 ERROR No ClubModels.Models.GeneralCodes.TransferCode Code With Id : d777ae4b-89a5-4080-142a-08dbd9255990 Exist In The Database
+2023-10-30 10:54:06.7678 ERROR No ClubModels.Models.GeneralCodes.TransferCode Code With Id : d777ae4b-89a5-4080-142a-08dbd9255990 Exist In The Database
+2023-10-30 10:54:13.8708 ERROR No ClubModels.Models.GeneralCodes.TransferCode Code With Id : d777ae4b-89a5-4080-142a-08dbd9255993 Exist In The Database
+2023-10-30 11:21:38.0149 ERROR __________________________________________________________________________________________ 
+ Error => Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IsId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ClubRepository.Repositories.GeneralCodes.SectionCodeRepository.GetAllAsync(Boolean trackChanges) in D:\WorkSpace\Repos\GitHup\CSharpWeb\TheClub\ClubRepository\Repositories\GeneralCodes\SectionCodeRepository.cs:line 32
+   at ClubAPI.Controllers.GeneralCodes.SectionCodesController.GetAllSections() in D:\WorkSpace\Repos\GitHup\CSharpWeb\TheClub\ClubAPI\Controllers\GeneralCodes\SectionCodesController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+ClientConnectionId:7dab77c0-316e-4400-a855-419a3fd88a09
+Error Number:207,State:1,Class:16
+2023-10-30 11:25:52.8267 ERROR No ClubModels.Models.GeneralCodes.SectionCode Code With Id : 2d1a7987-2993-4980-97d7-08dbd92a16e0 Exist In The Database
+2023-10-30 11:26:19.7693 ERROR No ClubModels.Models.GeneralCodes.SectionCode Code With Id : 2d1a7987-2993-4980-97d7-08dbd92a16e0 Exist In The Database

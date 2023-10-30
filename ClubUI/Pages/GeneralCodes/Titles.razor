@@ -1,0 +1,91 @@
+﻿@page "/titles"
+@using ClubEntities.DataTransferObjects.TitleCodes;
+@using ClubModels.Models.GeneralCodes
+@using ClubModels.Models;
+@using ClubUI.Pages.GeneralCodes.Model;
+@inject HttpClient Http
+@inject IMapper Mapper
+
+<h3>Titles</h3>
+
+<div>
+    <CodeForm 
+        EntityName = "Title"
+        SelectedEntity="@CVModel.SelectedEntity" 
+        SaveMethod="@FormSubmitted" 
+        MakeNew="@CVModel.MakeNew"
+        CalloutType="@CVModel.CallType"
+        LastSubmitResult="@CVModel.LastSubmitResult"
+    ></CodeForm>
+</div>
+<div>
+    <Grid 
+        TItem="TitleCode" 
+        class="table table-hover table-bordered table-striped" 
+        Data="CVModel.Entities" 
+        AllowFiltering="true" 
+        Responsive="true" 
+        AllowRowClick="true" 
+        OnRowClick="OnRowClick"
+        AllowPaging="true"
+        PageSize="20"
+        AllowSorting="true">
+
+        <GridColumn TItem="TitleCode" HeaderText="Code" PropertyName="Code" HeaderTextAlignment="Alignment.Center" SortDirection="@CVModel.CodeSort" SortKeySelector="item => item.Code">
+            @context.Code
+        </GridColumn>
+
+        <GridColumn TItem="TitleCode" HeaderText="Name" PropertyName="Name" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.Name">
+            @context.Name
+        </GridColumn>
+
+        <GridColumn TItem="TitleCode" HeaderText="Remove" HeaderTextAlignment="Alignment.Center" Sortable="false" Filterable="false">
+            <div class="d-flex justify-content-center" >
+                <Button Color="ButtonColor.Danger" @onclick="CVModel.OnDeleteVerifyShow"><Icon Name="IconName.TrashFill" ></Icon></Button>
+            </div>
+        </GridColumn>
+
+    </Grid>
+
+</div>
+
+<Modal @ref="CVModel.DeleteVerifyModal" Title="Modal title">
+    <BodyTemplate>
+        Are You Sure You Want To Delete Title
+    </BodyTemplate>
+    <FooterTemplate>
+        <Button Color="ButtonColor.Secondary" @onclick="CVModel.OnDeleteVerifyHide">Close</Button>
+        <Button Color="ButtonColor.Danger" @onclick="DeleteTitle">Delete</Button>
+    </FooterTemplate>
+</Modal>
+
+@code {
+    private CodeViewModel<TitleCode, TitleCodeCreateDTO, TitleCodeEditDTO> CVModel = new CodeViewModel<TitleCode, TitleCodeCreateDTO, TitleCodeEditDTO>()
+    {
+        IsNew = true,
+        CodeSort = SortDirection.Ascending,
+        CallType = AlertColor.Danger,
+        APIURL = "api/TitleCodes"
+    };
+
+
+
+    protected async override Task OnInitializedAsync() =>
+        CVModel.Entities = await Http.GetFromJsonAsync<List<TitleCode>>(CVModel.APIURL) ?? new List<TitleCode>();
+
+    private async void OnRowClick(GridRowEventArgs<TitleCode> args)
+        => await CVModel.OnRowClick(args, Mapper);
+
+    private async void DeleteTitle()
+    {
+        await CVModel.DeleteEntity(Http); 
+        StateHasChanged();
+    }
+
+    private async void FormSubmitted(EditContext editContext)
+    {
+        await CVModel.FormSubmitted(editContext, Http, Mapper);
+        StateHasChanged();
+    }
+
+}
