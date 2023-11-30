@@ -40,6 +40,8 @@ builder.Services.AddScoped<SectionExistValidation>();
 builder.Services.AddScoped<TitleExistValidation>();
 builder.Services.AddScoped<TransferExistValidation>();
 
+builder.Services.AddScoped<MemberExistValidation>();
+
 builder.Services.ConfigCORS();
 builder.Services.ConfigIISIntegration();
 

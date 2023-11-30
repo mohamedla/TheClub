@@ -206,15 +206,15 @@
       "mscorlib.dll": "sha256-X+o60j6cZnlI2vFFjdH81yYTAxx13\/wqnNSWTKbDsyw=",
       "netstandard.dll": "sha256-Cr6slBs\/R2v2t\/vecFDHbQHakbEhar0adYu0YemwiXI=",
       "System.Private.CoreLib.dll": "sha256-dDw5nzGJhW1jOjGfSJcs\/Mi4KQ+DZygXnoK+vJ+jHyk=",
-      "ClubEntities.dll": "sha256-WHPP7a7b0q2zmzSPC2oCpu+QJ7rOs9zMIBd8oW0uFnM=",
-      "ClubUI.dll": "sha256-GdNsTx6WgNnC7CFD2PgGxMVbCpQuUIgdLphmNK62Bao="
+      "ClubEntities.dll": "sha256-BuNir4GtH+yqjvuvFD2cOIwT5x89uAL4E7YkIkTghQM=",
+      "ClubUI.dll": "sha256-bkVc9QFxREHYLGBHWPpOD0KmyknvmWCC3O2fXXjzTOI="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "ClubEntities.pdb": "sha256-ZhdXyD43CVxM8HS6MiOzdgGUcgi+BN73gJwLvC4xmdM=",
-      "ClubUI.pdb": "sha256-o+qPs2ZicxrAoRHg66Swj6XMUep27loMg9hHbjihmd4="
+      "ClubEntities.pdb": "sha256-Gsq5po2mmozOhH9y5arUEb9y+HeLEFT5z9O0Yg0lFB0=",
+      "ClubUI.pdb": "sha256-AoDFgWkQhpRwhEnUSw40nUIDeqHUqk7w+c4K02Vwk+I="
     },
     "runtime": {
       "dotnet.7.0.11.o27azwqwfe.js": "sha256-RtIVigdAD1mUvR4pxoKyD8kcQgw4INP81v+PVSqkeQY=",

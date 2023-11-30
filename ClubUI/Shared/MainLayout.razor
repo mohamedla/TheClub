@@ -44,6 +44,7 @@
         navItems = new List<NavItem>
         {
             new NavItem { Id = "1", Href = "/", IconName = IconName.HouseDoorFill, Text = "Home", Match=NavLinkMatch.All},
+
             new NavItem { Id = "2", IconName = IconName.GearFill, Text = "General Codes"},
             new NavItem { Id = "3", IconName = IconName.GeoAlt, Href = "/cities", Text = "Cities", ParentId="2"},
             new NavItem { Id = "4", IconName = IconName.GenderAmbiguous, Href = "/genders", Text = "Gender", ParentId="2"},
@@ -57,6 +58,9 @@
             new NavItem { Id = "12", IconName = IconName.SignIntersection, Href = "/sections", Text = "Section", ParentId="2"},
             new NavItem { Id = "13", IconName = IconName.Alt, Href = "/titles", Text = "Titles", ParentId="2"},
             new NavItem { Id = "14", IconName = IconName.ArrowLeftRight, Href = "/transfers", Text = "Trans Reasons", ParentId="2"},
+
+            new NavItem { Id = "15", IconName = IconName.PersonSquare, Text = "Members"},
+            new NavItem { Id = "16", IconName = IconName.PersonFill, Href = "/membermeta", Text = "Member Meta Data", ParentId="15"},
         };
 
         return navItems;

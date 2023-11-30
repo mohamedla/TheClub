@@ -2,6 +2,7 @@
 using ClubAPI.ActionFilter;
 using ClubAPI.ActionFilter.GeneralCodes;
 using ClubContracts;
+using ClubEntities.DataTransferObjects.CityCodes;
 using ClubEntities.DataTransferObjects.MartialStatusCodes;
 using ClubModels.Models.GeneralCodes;
 using Microsoft.AspNetCore.Mvc;
@@ -28,8 +29,8 @@ namespace ClubAPI.Controllers.GeneralCodes
         public async Task<IActionResult> GetAllMartialStatus()
         {
             var martialStatus = await _repository.MartialStatusCode.GetAllAsync(false);
-
-            return Ok(martialStatus);
+            var martialStatusDTO = _mapper.Map<IEnumerable<MartialStatusCodeDTO>>(martialStatus);
+            return Ok(martialStatusDTO);
         }
 
         [HttpPost("", Name = nameof(AddMartialStatus))]

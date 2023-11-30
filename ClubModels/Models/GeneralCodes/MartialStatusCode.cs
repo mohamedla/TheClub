@@ -13,6 +13,7 @@ namespace ClubModels.Models.GeneralCodes
         [Key, Column("MartialStatusId")]
         public override Guid Id { get; set; }
 
+        public virtual IEnumerable<Member>? Members { get; set; }
         public override MartialStatusCode Clone()
             => new MartialStatusCode
             {

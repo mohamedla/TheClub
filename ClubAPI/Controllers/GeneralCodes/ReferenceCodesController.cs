@@ -2,6 +2,7 @@
 using ClubAPI.ActionFilter;
 using ClubAPI.ActionFilter.GeneralCodes;
 using ClubContracts;
+using ClubEntities.DataTransferObjects.CityCodes;
 using ClubEntities.DataTransferObjects.ReferenceCodes;
 using ClubModels.Models.GeneralCodes;
 using Microsoft.AspNetCore.Mvc;
@@ -28,8 +29,8 @@ namespace ClubAPI.Controllers.GeneralCodes
         public async Task<IActionResult> GetAllReferences()
         {
             var references = await _repository.ReferenceCode.GetAllAsync(false);
-
-            return Ok(references);
+            var referencesDTO = _mapper.Map<IEnumerable<ReferenceCodeDTO>>(references);
+            return Ok(referencesDTO);
         }
 
         [HttpPost("", Name = nameof(AddReference))]

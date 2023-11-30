@@ -2,6 +2,7 @@
 using ClubAPI.ActionFilter;
 using ClubAPI.ActionFilter.GeneralCodes;
 using ClubContracts;
+using ClubEntities.DataTransferObjects.CityCodes;
 using ClubEntities.DataTransferObjects.GenderCodes;
 using ClubModels.Models.GeneralCodes;
 using Microsoft.AspNetCore.Mvc;
@@ -28,8 +29,8 @@ namespace ClubAPI.Controllers.GeneralCodes
         public async Task<IActionResult> GetAllGenders()
         {
             var genders = await _repository.GenderCode.GetAllAsync(false);
-
-            return Ok(genders);
+            var gendersDTO = _mapper.Map<IEnumerable<GenderCodeDTO>>(genders);
+            return Ok(gendersDTO);
         }
 
         [HttpPost("", Name = nameof(AddGender))]

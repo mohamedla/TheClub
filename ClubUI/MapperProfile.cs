@@ -3,6 +3,7 @@ using ClubEntities.DataTransferObjects.CityCodes;
 using ClubEntities.DataTransferObjects.GenderCodes;
 using ClubEntities.DataTransferObjects.JobCodes;
 using ClubEntities.DataTransferObjects.MartialStatusCodes;
+using ClubEntities.DataTransferObjects.Member;
 using ClubEntities.DataTransferObjects.MembershipCodes;
 using ClubEntities.DataTransferObjects.NationalityCodes;
 using ClubEntities.DataTransferObjects.QualificationCodes;
@@ -11,6 +12,7 @@ using ClubEntities.DataTransferObjects.ReligionCodes;
 using ClubEntities.DataTransferObjects.SectionCodes;
 using ClubEntities.DataTransferObjects.TitleCodes;
 using ClubEntities.DataTransferObjects.TransferCodes;
+using ClubModels.Models;
 using ClubModels.Models.GeneralCodes;
 
 namespace ClubAPI
@@ -66,6 +68,11 @@ namespace ClubAPI
             CreateMap<TransferCode, TransferCodeCreateDTO>();
             CreateMap<TransferCode, TransferCodeEditDTO>();
             CreateMap<TransferCode, TransferCode>();
+
+            CreateMap<Member, MemberDataCreateDTO>();
+            CreateMap<Member, MemberDataUpdateDTO>();
+            CreateMap<MemberDataDTO, MemberDataUpdateDTO>();
+            CreateMap<MemberDataDTO, MemberDataCreateDTO>();
         }
     }
 }

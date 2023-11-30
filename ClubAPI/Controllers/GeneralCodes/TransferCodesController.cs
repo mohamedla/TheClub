@@ -2,6 +2,7 @@
 using ClubAPI.ActionFilter;
 using ClubAPI.ActionFilter.GeneralCodes;
 using ClubContracts;
+using ClubEntities.DataTransferObjects.ReferenceCodes;
 using ClubEntities.DataTransferObjects.TransferCodes;
 using ClubModels.Models.GeneralCodes;
 using Microsoft.AspNetCore.Mvc;
@@ -28,8 +29,8 @@ namespace ClubAPI.Controllers.GeneralCodes
         public async Task<IActionResult> GetAllTransfers()
         {
             var transfers = await _repository.TransferCode.GetAllAsync(false);
-
-            return Ok(transfers);
+            var transfersDTO = _mapper.Map<IEnumerable<TransferCodeDTO>>(transfers);
+            return Ok(transfersDTO);
         }
 
         [HttpPost("", Name = nameof(AddTransfer))]

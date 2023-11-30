@@ -14,6 +14,7 @@ namespace ClubModels.Models.GeneralCodes
         [Key, Column("QualId")]
         public override Guid Id { get; set; }
 
+        public virtual IEnumerable<Member>? Members { get; set; }
         public override QualificationCode Clone()
             => new QualificationCode
             {

@@ -2,6 +2,7 @@
 using ClubAPI.ActionFilter;
 using ClubAPI.ActionFilter.GeneralCodes;
 using ClubContracts;
+using ClubEntities.DataTransferObjects.CityCodes;
 using ClubEntities.DataTransferObjects.QualificationCodes;
 using ClubModels.Models.GeneralCodes;
 using Microsoft.AspNetCore.Mvc;
@@ -28,8 +29,8 @@ namespace ClubAPI.Controllers.GeneralCodes
         public async Task<IActionResult> GetAllQualifications()
         {
             var qualifications = await _repository.QualificationCode.GetAllAsync(false);
-
-            return Ok(qualifications);
+            var qualificationsDTO = _mapper.Map<IEnumerable<QualificationCodeDTO>>(qualifications);
+            return Ok(qualificationsDTO);
         }
 
         [HttpPost("", Name = nameof(AddQualification))]

@@ -1,4 +1,6 @@
 ﻿using ClubContracts;
+using ClubEntities.DataTransferObjects.Member;
+using ClubModels.Models.GeneralCodes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
@@ -16,21 +18,17 @@ namespace ClubAPI.ActionFilter.GeneralCodes
 
         public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
         {
-            var trackChanges = context.HttpContext.Request.Method.Equals("PUT");
+            var member = context.ActionArguments.SingleOrDefault(x => x.Key.ToString().Contains("MemberDTO")).Value as MemberDataManipulationDTO;
 
-            var cityId = (Guid)context.ActionArguments["Id"];
-
-            var city = await _repository.CityCode.GetByIdAsync(cityId, trackChanges);
-
-            if (city == null)
+            if (member == null)
             {
-                _Logger.LogError($"No City Code With Id : {cityId} Exist In The Database");
-                context.Result = new NotFoundObjectResult("No City Code Match The Request");
+                await MainActionFilters<CityCode>.CheckEntityExists(context, next, _Logger, _repository.CityCode.GetByIdAsync);
             }
             else
             {
-                context.HttpContext.Items.Add("city", city);
-                await next();
+                await MainActionFilters<CityCode>.CheckEntityExistsForMember(context, next, _Logger, _repository.CityCode.GetByIdAsync, member.CityId, "City");
+
+                await MainActionFilters<CityCode>.CheckEntityExistsForMember(context, next, _Logger, _repository.CityCode.GetByIdAsync, member.BirthPlaceId, "Birth Place");
             }
         }
     }

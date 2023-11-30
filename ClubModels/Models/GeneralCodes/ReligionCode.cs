@@ -13,6 +13,7 @@ namespace ClubModels.Models.GeneralCodes
         [Key, Column("ReligionId")]
         public override Guid Id { get; set; }
 
+        public virtual IEnumerable<Member>? Members { get; set; }
         public override ReligionCode Clone()
             => new ReligionCode
             {

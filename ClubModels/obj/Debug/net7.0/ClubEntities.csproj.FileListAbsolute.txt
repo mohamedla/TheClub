@@ -10,3 +10,15 @@ D:\WorkSpace\Repos\GitHup\CSharpWeb\TheClub\ClubModels\obj\Debug\net7.0\ClubEnti
 D:\WorkSpace\Repos\GitHup\CSharpWeb\TheClub\ClubModels\obj\Debug\net7.0\refint\ClubEntities.dll
 D:\WorkSpace\Repos\GitHup\CSharpWeb\TheClub\ClubModels\obj\Debug\net7.0\ClubEntities.pdb
 D:\WorkSpace\Repos\GitHup\CSharpWeb\TheClub\ClubModels\obj\Debug\net7.0\ref\ClubEntities.dll
+D:\WorkSpace\Repos\GitHup\TheClub\ClubModels\obj\Debug\net7.0\ClubEntities.csproj.AssemblyReference.cache
+D:\WorkSpace\Repos\GitHup\TheClub\ClubModels\obj\Debug\net7.0\ClubEntities.GeneratedMSBuildEditorConfig.editorconfig
+D:\WorkSpace\Repos\GitHup\TheClub\ClubModels\obj\Debug\net7.0\ClubEntities.AssemblyInfoInputs.cache
+D:\WorkSpace\Repos\GitHup\TheClub\ClubModels\obj\Debug\net7.0\ClubEntities.AssemblyInfo.cs
+D:\WorkSpace\Repos\GitHup\TheClub\ClubModels\obj\Debug\net7.0\ClubEntities.csproj.CoreCompileInputs.cache
+D:\WorkSpace\Repos\GitHup\TheClub\ClubModels\obj\Debug\net7.0\ClubEntities.dll
+D:\WorkSpace\Repos\GitHup\TheClub\ClubModels\obj\Debug\net7.0\refint\ClubEntities.dll
+D:\WorkSpace\Repos\GitHup\TheClub\ClubModels\obj\Debug\net7.0\ClubEntities.pdb
+D:\WorkSpace\Repos\GitHup\TheClub\ClubModels\bin\Debug\net7.0\ClubEntities.deps.json
+D:\WorkSpace\Repos\GitHup\TheClub\ClubModels\bin\Debug\net7.0\ClubEntities.dll
+D:\WorkSpace\Repos\GitHup\TheClub\ClubModels\bin\Debug\net7.0\ClubEntities.pdb
+D:\WorkSpace\Repos\GitHup\TheClub\ClubModels\obj\Debug\net7.0\ref\ClubEntities.dll

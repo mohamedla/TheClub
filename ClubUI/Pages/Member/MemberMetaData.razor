@@ -1,0 +1,48 @@
+﻿@page "/membermeta"
+@using ClubEntities.DataTransferObjects.Member;
+@using ClubModels.Models;
+@inject HttpClient Http
+@inject IMapper Mapper
+
+<h3>Member Meta Data</h3>
+
+<div>
+    <Grid 
+        TItem="MemberMetaDataDTO" 
+        class="table table-hover table-bordered table-striped" 
+        Data="members" 
+        AllowFiltering="true" 
+        Responsive="true" 
+        AllowRowClick="true" 
+        AllowPaging="true"
+        PageSize="20"
+        AllowSorting="true">
+
+        <GridColumn TItem="MemberMetaDataDTO" HeaderText="Title" PropertyName="Title" HeaderTextAlignment="Alignment.Center" SortKeySelector="item => item.Title">
+            @context.Title
+        </GridColumn>
+
+        <GridColumn TItem="MemberMetaDataDTO" HeaderText="Name" PropertyName="Name" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortDirection="SortDirection.Ascending" SortKeySelector="item => item.Name">
+            @context.Name
+        </GridColumn>
+
+        <GridColumn TItem="MemberMetaDataDTO" HeaderText="Id No" PropertyName="IdNo" HeaderTextAlignment="Alignment.Center" TextAlignment="Alignment.Center" SortKeySelector="item => item.IdNo">
+            @context.IdNo
+        </GridColumn>
+
+        <GridColumn TItem="MemberMetaDataDTO" HeaderText="Profile" HeaderTextAlignment="Alignment.Center" Sortable="false" Filterable="false">
+            <div class="d-flex justify-content-center" >
+                <Button Color="ButtonColor.Primary"><a href="@($"/memberform/{context.Id}")"><Icon Color="IconColor.White" Name="IconName.FilePersonFill" ></Icon></a></Button>
+            </div>
+        </GridColumn>
+
+    </Grid>
+
+</div>
+
+@code {
+    private List<MemberMetaDataDTO> members;
+
+    protected async override Task OnInitializedAsync() =>
+        members = await Http.GetFromJsonAsync<List<MemberMetaDataDTO>>("api/Members/meta") ?? new List<MemberMetaDataDTO>();
+}

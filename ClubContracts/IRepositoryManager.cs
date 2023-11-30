@@ -1,4 +1,5 @@
 ﻿using ClubContracts.GeneralCodes.IRepositories;
+using ClubContracts.Members.IRepository;
 
 namespace ClubContracts
 {
@@ -19,6 +20,7 @@ namespace ClubContracts
         ITransferCodeRepository TransferCode { get; }
         #endregion
 
+        IMemberRepository Member { get; }
         void Save();
         Task SaveAsync();
 

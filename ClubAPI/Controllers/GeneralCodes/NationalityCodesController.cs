@@ -2,6 +2,7 @@
 using ClubAPI.ActionFilter;
 using ClubAPI.ActionFilter.GeneralCodes;
 using ClubContracts;
+using ClubEntities.DataTransferObjects.CityCodes;
 using ClubEntities.DataTransferObjects.NationalityCodes;
 using ClubModels.Models.GeneralCodes;
 using Microsoft.AspNetCore.Mvc;
@@ -28,8 +29,8 @@ namespace ClubAPI.Controllers.GeneralCodes
         public async Task<IActionResult> GetAllNationalities()
         {
             var nationalities = await _repository.NationalityCode.GetAllAsync(false);
-
-            return Ok(nationalities);
+            var nationalitiesDTO = _mapper.Map<IEnumerable<NationalityCodeDTO>>(nationalities);
+            return Ok(nationalitiesDTO);
         }
 
         [HttpPost("", Name = nameof(AddNationality))]

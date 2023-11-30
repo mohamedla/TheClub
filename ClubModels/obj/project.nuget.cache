@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MW66mNxIOoLHL4mlEUJ2Tovpe1x/DrHpTTjf46B3h4G9W1HhocHKIHht0RZStKn2eW/JkJetX8r5kLwPjM98dw==",
+  "dgSpecHash": "mZa4DnWAim8eg3b0rGqLaDnWJnh3GCMwEkYd8PHEdI0J3YgnA2GElGdmSAo8gemw7EWlU+IxqtBxFVZ7QZNaIg==",
   "success": true,
-  "projectFilePath": "D:\\WorkSpace\\Repos\\GitHup\\CSharpWeb\\TheClub\\ClubModels\\ClubEntities.csproj",
+  "projectFilePath": "D:\\WorkSpace\\Repos\\GitHup\\TheClub\\ClubModels\\ClubEntities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.12\\microsoft.entityframeworkcore.7.0.12.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.12\\microsoft.entityframeworkcore.abstractions.7.0.12.nupkg.sha512",

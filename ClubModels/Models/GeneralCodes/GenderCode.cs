@@ -14,6 +14,8 @@ namespace ClubModels.Models.GeneralCodes
         [Key, Column("GenderId")]
         public override Guid Id { get; set; }
 
+        public virtual IEnumerable<Member>? Members { get; set; }
+
         public override GenderCode Clone()
             => new GenderCode
             {

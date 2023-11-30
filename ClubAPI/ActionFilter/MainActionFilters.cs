@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc;
 using ClubContracts;
+using ClubModels.Models;
 
 namespace ClubAPI.ActionFilter
 {
@@ -17,12 +18,30 @@ namespace ClubAPI.ActionFilter
             if (entity == null)
             {
                 Logger.LogError($"No {typeof(T)} Code With Id : {entityId} Exist In The Database");
-                context.Result = new NotFoundObjectResult($"No Code Match The Request");
+                context.Result = new NotFoundObjectResult("No Code Match The Request");
             }
             else
             {
                 context.HttpContext.Items.Add("entity", entity);
                 await next();
+            }
+        }
+
+        public static async Task CheckEntityExistsForMember(ActionExecutingContext context, ActionExecutionDelegate next, ILoggerManager Logger, Func<Guid, bool, Task<T>> getEntityById, Guid entityId, string msg)
+        {
+            if (context.Result == null)
+            {
+                var entity = await getEntityById(entityId, false);
+
+                if (entity == null)
+                {
+                    Logger.LogError($"No {typeof(T)} Code With Id : {entityId} Exist In The Database");
+                    context.Result = new NotFoundObjectResult($"No {msg} Match The Request");
+                }
+                else
+                {
+                    await next();
+                }
             }
         }
     }

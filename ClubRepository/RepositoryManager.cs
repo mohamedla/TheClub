@@ -1,7 +1,9 @@
 ﻿using ClubContracts;
 using ClubContracts.GeneralCodes.IRepositories;
+using ClubContracts.Members.IRepository;
 using ClubModels;
 using ClubModels.Models.GeneralCodes;
+using ClubRepository.Repositories;
 using ClubRepository.Repositories.GeneralCodes;
 using System;
 using System.Collections.Generic;
@@ -29,6 +31,8 @@ namespace ClubRepository
         private ITitleCodeRepository _TitleCodeRepo;
         private ITransferCodeRepository _TransferCodeRepo;
         #endregion
+
+        private IMemberRepository _MemberRepo;
 
         public RepositoryManager(RepositoryContext repositoryContext)
         {
@@ -145,6 +149,17 @@ namespace ClubRepository
             }
         }
         #endregion
+
+        public IMemberRepository Member
+        {
+            get
+            {
+                if (_MemberRepo == null)
+                    _MemberRepo = new MemberRepository(_repositoryContext);
+                return _MemberRepo;
+            }
+
+        }
 
         public void Save() => _repositoryContext.SaveChanges();
 

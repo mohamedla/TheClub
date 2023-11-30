@@ -1,39 +1,39 @@
 {
   "Files": [
     {
-      "Id": "D:\\WorkSpace\\Repos\\GitHup\\CSharpWeb\\TheClub\\ClubUI\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "Id": "D:\\WorkSpace\\Repos\\GitHup\\TheClub\\ClubUI\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "D:\\WorkSpace\\Repos\\GitHup\\CSharpWeb\\TheClub\\ClubUI\\obj\\Debug\\net7.0\\build-gz\\XAO7YqCL.gz",
+      "Id": "D:\\WorkSpace\\Repos\\GitHup\\TheClub\\ClubUI\\obj\\Debug\\net7.0\\build-gz\\XAO7YqCL.gz",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
     },
     {
-      "Id": "D:\\WorkSpace\\Repos\\GitHup\\CSharpWeb\\TheClub\\ClubUI\\obj\\Debug\\net7.0\\scopedcss\\bundle\\ClubUI.styles.css",
+      "Id": "D:\\WorkSpace\\Repos\\GitHup\\TheClub\\ClubUI\\obj\\Debug\\net7.0\\scopedcss\\bundle\\ClubUI.styles.css",
       "PackagePath": "staticwebassets\\ClubUI.styles.css"
     },
     {
-      "Id": "D:\\WorkSpace\\Repos\\GitHup\\CSharpWeb\\TheClub\\ClubUI\\wwwroot\\ClubIcon.png",
+      "Id": "D:\\WorkSpace\\Repos\\GitHup\\TheClub\\ClubUI\\wwwroot\\ClubIcon.png",
       "PackagePath": "staticwebassets\\ClubIcon.png"
     },
     {
-      "Id": "D:\\WorkSpace\\Repos\\GitHup\\CSharpWeb\\TheClub\\ClubUI\\wwwroot\\css\\app.css",
+      "Id": "D:\\WorkSpace\\Repos\\GitHup\\TheClub\\ClubUI\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "D:\\WorkSpace\\Repos\\GitHup\\CSharpWeb\\TheClub\\ClubUI\\wwwroot\\favicon.png",
+      "Id": "D:\\WorkSpace\\Repos\\GitHup\\TheClub\\ClubUI\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "D:\\WorkSpace\\Repos\\GitHup\\CSharpWeb\\TheClub\\ClubUI\\wwwroot\\icon-192.png",
+      "Id": "D:\\WorkSpace\\Repos\\GitHup\\TheClub\\ClubUI\\wwwroot\\icon-192.png",
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
-      "Id": "D:\\WorkSpace\\Repos\\GitHup\\CSharpWeb\\TheClub\\ClubUI\\wwwroot\\index.html",
+      "Id": "D:\\WorkSpace\\Repos\\GitHup\\TheClub\\ClubUI\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "D:\\WorkSpace\\Repos\\GitHup\\CSharpWeb\\TheClub\\ClubUI\\wwwroot\\sample-data\\weather.json",
+      "Id": "D:\\WorkSpace\\Repos\\GitHup\\TheClub\\ClubUI\\wwwroot\\sample-data\\weather.json",
       "PackagePath": "staticwebassets\\sample-data\\weather.json"
     },
     {

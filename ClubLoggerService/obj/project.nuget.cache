@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xHfcl/cdW1lqdzBX9nPMS45YQwl48oO2qZMy3/7N5ZIE2P2hW6DibaYanGqFMTFthY7a3zl+7sPDIynxbl27Fw==",
+  "dgSpecHash": "B6G3HPElJOpS89Gv79TrwDTN/AtjiEh3WQTX4Bp7BlNlz5wrMLJvZFmjqOAObq7oXn3q94XPEpF2NPNKh+KwWg==",
   "success": true,
-  "projectFilePath": "D:\\WorkSpace\\Repos\\GitHup\\CSharpWeb\\TheClub\\ClubLoggerService\\ClubLoggerService.csproj",
+  "projectFilePath": "D:\\WorkSpace\\Repos\\GitHup\\TheClub\\ClubLoggerService\\ClubLoggerService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.12\\microsoft.entityframeworkcore.7.0.12.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.12\\microsoft.entityframeworkcore.abstractions.7.0.12.nupkg.sha512",

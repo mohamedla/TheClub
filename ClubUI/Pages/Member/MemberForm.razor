@@ -1,0 +1,395 @@
+﻿@page "/memberform/{id}"
+@using ClubModels.Models;
+@using ClubEntities.DataTransferObjects.Member;
+@using ClubModels.Models.GeneralCodes;
+@inject HttpClient Http
+@inject IMapper Mapper
+@inject NavigationManager navigationManager
+
+<h3> <a href="/membermeta"><Icon Name="IconName.ArrowLeftSquare" Color="IconColor.Dark"></Icon></a> Member Data</h3>
+
+<div>
+    @if (LastResult != null)
+    {
+        <Alert Color="@CallType"> @LastResult </Alert>
+    }
+
+    <EditForm Model="@member" OnSubmit="@SaveMethod">
+        <DataAnnotationsValidator />
+
+        <div class="d-flex justify-content-end">
+            <button type="reset" @onclick="@MakeNew" class="btn btn-primary align-self-center mx-2">New</button>
+            <button type="submit" class="btn btn-success align-self-center me-2">Submit</button>
+        </div>
+
+        <div class="d-flex align-items-center">
+
+            <div class="mb-3 flex-fill">
+                <label for="memberNo" class="form-label">Number</label>
+                <input type="number" class="form-control" id="memberNo" aria-describedby="memberNoHelp" @bind-value="member.MemberNo" min="1" max="@int.MaxValue" step="1" required>
+                <div id="memberNoHelp" class="form-text">This memberNo Must Be Unique</div>
+            </div>
+
+            <div class="mb-3 mx-3 flex-fill">
+                <label for="Name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="Name" aria-describedby="nameHelp" @bind-value="@member.Name" maxlength="200" required>
+                <div id="nameHelp" class="form-text">Add Name</div>
+            </div>
+
+        </div>
+
+        <div class="d-flex align-items-center">
+
+            <div class="mb-3 flex-fill">
+                <label for="city" class="form-label">City</label>
+                <select @bind="member.CityId" id="city" class="form-select" aria-describedby="cityHelp" required>
+
+                    <option>Open this select menu</option>
+                    @foreach (CityCode c in cityList)
+                    {
+                        <option value="@c.Id">@c.Name</option>
+                    }
+                </select>
+                <div id="cityHelp" class="form-text">Select City</div>
+            </div>
+
+            <div class="mb-3 mx-3 flex-fill">
+                <label for="address" class="form-label">Address</label>
+                <input type="text" class="form-control" id="address" aria-describedby="addressHelp" @bind-value="@member.Address" maxlength="500" required>
+                <div id="addressHelp" class="form-text">Add Address</div>
+            </div>
+
+        </div>
+
+        <div class="d-flex align-items-center">
+
+            <div class="mb-3 flex-fill">
+                <label for="birthplace" class="form-label">Birth Place</label>
+                <select @bind="member.BirthPlaceId" id="birthplace" class="form-select" aria-describedby="birthplaceHelp" required>
+
+                    <option>Open this select menu</option>
+                    @foreach (CityCode c in cityList)
+                    {
+                        <option value="@c.Id">@c.Name</option>
+                    }
+                </select>
+                <div id="birthplaceHelp" class="form-text">Select Birth Place</div>
+            </div>
+
+            <div class="mb-3 mx-3 flex-fill">
+                <label for="birthday" class="form-label">Birth Day</label>
+                <DateInput required TValue="DateTime" @bind-Value="@member.Birthday" Placeholder="Enter Birth Date" id="birthday" aria-describedby="birthdayHelp" />
+                <div id="birthdayHelp" class="form-text">Select Birth Day</div>
+            </div>
+
+            <div class="mb-3 mx-3 flex-fill">
+                <label for="idNo" class="form-label">Id No</label>
+                <input type="text" class="form-control" id="idNo" aria-describedby="idNoHelp" @bind-value="@member.IdNo" maxlength="500" pattern="[0-9]{14}" required>
+                <div id="idNoHelp" class="form-text">Add Id No</div>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-center">
+
+            <div class="mb-3 flex-fill">
+                <label for="nationality" class="form-label">Nationality</label>
+                <select @bind="member.NationalityID" id="nationality" class="form-select" aria-describedby="nationalityHelp" required>
+
+                    <option>Open this select menu</option>
+                    @foreach (NationalityCode c in nationalityList)
+                    {
+                        <option value="@c.Id">@c.Name</option>
+                    }
+                </select>
+                <div id="nationalityHelp" class="form-text">Select Nationality</div>
+            </div>
+
+            <div class="mb-3 mx-3 flex-fill">
+                <label for="gender" class="form-label">Gender</label>
+                <select @bind="member.Gender" id="gender" class="form-select" aria-describedby="genderHelp" required>
+
+                    <option>Open this select menu</option>
+                    @foreach (GenderCode c in genderList)
+                    {
+                        <option value="@c.Id">@c.Name</option>
+                    }
+                </select>
+                <div id="genderHelp" class="form-text">Select Gender</div>
+            </div>
+
+            <div class="mb-3 mx-3 flex-fill">
+                <label for="martial" class="form-label">Martial Status</label>
+                <select @bind="member.MartialStatusId" id="martial" class="form-select" aria-describedby="martialHelp" required>
+
+                    <option>Open this select menu</option>
+                    @foreach (MartialStatusCode c in martialList)
+                    {
+                        <option value="@c.Id">@c.Name</option>
+                    }
+                </select>
+                <div id="martialHelp" class="form-text">Select Martial Status</div>
+            </div>
+
+            <div class="mb-3 mx-3 flex-fill">
+                <label for="religion" class="form-label">Religion</label>
+                <select @bind="member.ReligionId" id="religion" class="form-select" aria-describedby="religionHelp" required>
+
+                    <option>Open this select menu</option>
+                    @foreach (ReligionCode c in religionList)
+                    {
+                        <option value="@c.Id">@c.Name</option>
+                    }
+                </select>
+                <div id="religionHelp" class="form-text">Select Religion</div>
+            </div>
+
+        </div>
+
+        <div class="d-flex align-items-center">
+
+            <div class="mb-3 flex-fill">
+                <label for="title" class="form-label">Title</label>
+                <select @bind="member.Title" id="title" class="form-select" aria-describedby="titleHelp" required>
+
+                    <option>Open this select menu</option>
+                    @foreach (TitleCode c in titleList)
+                    {
+                        <option value="@c.Id">@c.Name</option>
+                    }
+                </select>
+                <div id="titleHelp" class="form-text">Select Title</div>
+            </div>
+
+            <div class="mb-3 mx-3 flex-fill">
+                <label for="job" class="form-label">Job</label>
+                <select @bind="member.JobId" id="job" class="form-select" aria-describedby="jobHelp" required>
+
+                    <option>Open this select menu</option>
+                    @foreach (JobCode c in jobList)
+                    {
+                        <option value="@c.Id">@c.Name</option>
+                    }
+                </select>
+                <div id="jobHelp" class="form-text">Select Job</div>
+            </div>
+
+            <div class="mb-3 mx-3 flex-fill">
+                <label for="personalPhone" class="form-label">Personal Phone</label>
+                <input type="text" class="form-control" id="personalPhone" aria-describedby="personalPhoneHelp" @bind-value="@member.PersonalPhone" maxlength="500" pattern="[0-9]{8,11}" required>
+                <div id="personalPhoneHelp" class="form-text">Add Personal Phone</div>
+            </div>
+
+            <div class="mb-3 mx-3 flex-fill">
+                <label for="JobPhone" class="form-label">Job Phone</label>
+                <input type="text" class="form-control" id="JobPhone" aria-describedby="personalPhoneHelp" @bind-value="@member.JobPhone" maxlength="500" pattern="[0-9]{8,11}" required>
+                <div id="jobPhoneHelp" class="form-text">Add Job Phone</div>
+            </div>
+
+        </div>
+
+        <div class="d-flex align-items-center">
+        
+            <div class="mb-3 flex-fill">
+                <label for="jobAddress" class="form-label">Job Address</label>
+                <input type="text" class="form-control" id="jobAddress" aria-describedby="jobAddressHelp" @bind-value="@member.JobAddress" maxlength="500" required>
+                <div id="jobAddressHelp" class="form-text">Add Job Address</div>
+            </div>
+
+        </div>
+
+        <div class="d-flex align-items-center">
+
+            <div class="mb-3 flex-fill">
+                <label for="qual" class="form-label">Qualification</label>
+                <select @bind="member.QualId" id="qual" class="form-select" aria-describedby="qualHelp" required>
+
+                    <option>Open this select menu</option>
+                    @foreach (QualificationCode c in QualList)
+                    {
+                        <option value="@c.Id">@c.Name</option>
+                    }
+                </select>
+                <div id="qualHelp" class="form-text">Select Qualification</div>
+            </div>
+
+            <div class="mb-3 mx-3 flex-fill">
+                <label for="membership" class="form-label">Membership</label>
+                <select @bind="member.MembershipId" id="membership" class="form-select" aria-describedby="membershipHelp" required>
+
+                    <option>Open this select menu</option>
+                    @foreach (MembershipCode c in membershipList)
+                    {
+                        <option value="@c.Id">@c.Name</option>
+                    }
+                </select>
+                <div id="membershipHelp" class="form-text">Select Membership</div>
+            </div>
+
+            <div class="mb-3 mx-3 flex-fill">
+                <label for="section" class="form-label">Section</label>
+                <select @bind="@member.SectionId" id="section" class="form-select" aria-describedby="sectionHelp" required>
+
+                    <option>Open this select menu</option>
+                    @foreach (SectionCode c in sectionList)
+                    {
+                        <option value="@c.Id">@c.Name</option>
+                    }
+                </select>
+                <div id="sectionHelp" class="form-text">Select Section</div>
+            </div>
+
+        </div>
+
+        <div class="d-flex align-items-center">
+
+            <div class="mb-3 flex-fill">
+                <label for="membershipOrderDate" class="form-label">Membership Order Date</label>
+                <DateInput required TValue="DateTime" @bind-Value="@member.MemberOrderDate" Placeholder="Enter Membership Order Date" id="membershipOrderDate" aria-describedby="membershipOrderDateHelp" />
+                <div id="membershipOrderDateHelp" class="form-text">Select Membership Order Date</div>
+            </div>
+
+            <div class="mb-3 mx-3 flex-fill">
+                <label for="membershipEndDate" class="form-label">Membership End Date</label>
+                <DateInput required TValue="DateTime" @bind-Value="@member.MemberEndDate" Placeholder="Enter Membership End Date" id="membershipEndDate" aria-describedby="membershipEndDateHelp" />
+                <div id="membershipEndDateHelp" class="form-text">Select Membership End Date</div>
+            </div>
+
+            <div class="mb-3 mx-3 flex-fill">
+                <label for="membershipNo" class="form-label">Membership Number</label>
+                <input type="text" class="form-control" id="membershipNo" aria-describedby="membershipNoHelp" @bind-value="@member.MemberOrderNo" maxlength="500" pattern="[0-9]" required>
+                <div id="membershipNoHelp" class="form-text">Add Membership Number</div>
+            </div>
+
+        </div>
+
+        <div class="d-flex align-items-center">
+
+            <div class="mb-3 flex-fill">
+                <label for="membershipRenewDate" class="form-label">Membership Renew Date</label>
+                <DateInput required TValue="DateTime" @bind-Value="@member.MemberEndDate" Placeholder="Enter Membership Renew Date" id="membershipRenewDate" aria-describedby="membershipRenewDateHelp" />
+                <div id="membershipRenewDateHelp" class="form-text">Select Membership End Date</div>
+            </div>
+
+            <div class="mb-3 mx-3 flex-fill">
+                <label for="cardDate" class="form-label">Card Date</label>
+                <DateInput required TValue="DateTime" @bind-Value="@member.MemberEndDate" Placeholder="Enter Membership Renew Date" id="cardDate" aria-describedby="cardDateHelp" />
+                <div id="cardDateHelp" class="form-text">Select Card Date</div>
+            </div>
+
+            <div class="mt-3 mx-3 flex-fill">
+                <Switch @bind-Value="member.HasCard" Label="Has Card" />
+            </div>
+        </div>
+
+        <div class="d-flex align-items-center">
+        
+            <div class="mb-3 flex-fill">
+                <label for="notes" class="form-label">Notes</label>
+                <textarea @bind="@member.Notes" class="form-control" id="notes" rows="2" aria-describedby="jobAddressHelp"></textarea>
+            </div>
+
+        </div>
+
+    </EditForm>
+</div>
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+
+    private MemberDataDTO member;
+    private AlertColor CallType;
+    private string LastResult = "";
+    private List<CityCode> cityList;
+    private List<NationalityCode> nationalityList;
+    private List<GenderCode> genderList;
+    private List<MartialStatusCode> martialList;
+    private List<ReligionCode> religionList;
+    private List<JobCode> jobList;
+    private List<TitleCode> titleList;
+    private List<MembershipCode> membershipList;
+    private List<SectionCode> sectionList;
+    private List<QualificationCode> QualList;
+    public bool IsNew = false;
+
+    protected async override Task OnInitializedAsync()
+    {
+        cityList = await Http.GetFromJsonAsync<List<CityCode>>("api/CityCodes") ?? new List<CityCode>();
+        nationalityList = await Http.GetFromJsonAsync<List<NationalityCode>>("api/NationalityCodes") ?? new List<NationalityCode>();
+        genderList = await Http.GetFromJsonAsync<List<GenderCode>>("api/GenderCodes") ?? new List<GenderCode>();
+        martialList = await Http.GetFromJsonAsync<List<MartialStatusCode>>("api/MartialStatusCodes") ?? new List<MartialStatusCode>();
+        religionList = await Http.GetFromJsonAsync<List<ReligionCode>>("api/ReligionCodes") ?? new List<ReligionCode>();
+        jobList = await Http.GetFromJsonAsync<List<JobCode>>("api/JobCodes") ?? new List<JobCode>();
+        titleList = await Http.GetFromJsonAsync<List<TitleCode>>("api/TitleCodes") ?? new List<TitleCode>();
+        membershipList = await Http.GetFromJsonAsync<List<MembershipCode>>("api/MembershipCodes") ?? new List<MembershipCode>();
+        sectionList = await Http.GetFromJsonAsync<List<SectionCode>>("api/SectionCodes") ?? new List<SectionCode>();
+        QualList = await Http.GetFromJsonAsync<List<QualificationCode>>("api/QualificationCodes") ?? new List<QualificationCode>();
+
+        var response = await Http.GetAsync($"api/Members/{Id}");
+        if (!response.IsSuccessStatusCode)
+        {
+            LastResult = new StreamReader(response.Content.ReadAsStream()).ReadToEnd();
+            CallType = AlertColor.Danger;
+        }
+        else
+        {
+            member = JsonConvert.DeserializeObject<MemberDataDTO>(await response.Content.ReadAsStringAsync());
+            LastResult = member.Name;
+        }
+        StateHasChanged();
+    }
+
+    public async void MakeNew(MouseEventArgs e)
+    {
+        IsNew = true;
+        member = new MemberDataDTO();
+        var members = await Http.GetFromJsonAsync<List<MemberMetaDataDTO>>($"api/Members/meta");
+        member.MemberNo = members.OrderByDescending(e => e.MemberNo).First().MemberNo + 1;
+        LastResult = "";
+        StateHasChanged();
+    }
+
+    private async void SaveMethod(EditContext editContext)
+    {
+        if (editContext.Validate())
+        {
+            if (IsNew)
+            {
+                var createdMember = Mapper.Map<MemberDataCreateDTO>(member);
+                var response = await Http.PostAsJsonAsync("api/Members", createdMember);
+                var content = response.Content.ReadAsStream();
+                if (!response.IsSuccessStatusCode)
+                {
+                    LastResult = new StreamReader(content).ReadToEnd(); ;
+                    CallType = AlertColor.Danger;
+                }
+                else
+                {
+                    member = JsonConvert.DeserializeObject<MemberDataDTO>(await response.Content.ReadAsStringAsync());
+                    //Other That show new data on same page we could navigate to the new member page
+                    //navigationManager.NavigateTo($"memberform/{member.Id}");
+                    CallType = AlertColor.Success;
+                    LastResult = $"Member {member.Name} Added Successfully";
+                }
+            }
+            else
+            {
+                var updatedMember = Mapper.Map<MemberDataUpdateDTO>(member);
+                var response = await Http.PutAsJsonAsync($"api/Members/{updatedMember.Id}", updatedMember);
+                var content = response.Content.ReadAsStream();
+                if (!response.IsSuccessStatusCode)
+                {
+                    LastResult = new StreamReader(content).ReadToEnd();
+                    CallType = AlertColor.Danger;
+                }
+                else
+                {
+                    member = JsonConvert.DeserializeObject<MemberDataDTO>(await response.Content.ReadAsStringAsync());
+                    CallType = AlertColor.Success;
+                    LastResult = $"Member {member.Name} Updated Successfully";
+                }
+            }
+        }
+        StateHasChanged();
+    }
+}

@@ -1,4 +1,5 @@
 ﻿using ClubContracts;
+using ClubEntities.DataTransferObjects.Member;
 using ClubModels.Models.GeneralCodes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
@@ -17,7 +18,16 @@ namespace ClubAPI.ActionFilter.GeneralCodes
 
         public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
         {
-            await MainActionFilters<TitleCode>.CheckEntityExists(context, next, _Logger, _repository.TitleCode.GetByIdAsync);
+            var member = context.ActionArguments.SingleOrDefault(x => x.Key.ToString().Contains("MemberDTO")).Value as MemberDataManipulationDTO;
+
+            if (member == null)
+            {
+                await MainActionFilters<TitleCode>.CheckEntityExists(context, next, _Logger, _repository.TitleCode.GetByIdAsync);
+            }
+            else
+            {
+                await MainActionFilters<TitleCode>.CheckEntityExistsForMember(context, next, _Logger, _repository.TitleCode.GetByIdAsync, member.Title, "Title");
+            }
         }
     }
 }

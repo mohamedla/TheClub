@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gYp4fCWGZ4MEShZEPxIv/9ThYJl8SyraQUPeUY3nr8u/XEGbsERDJZh5/quY/YgRfGpUIFRR72smi/jMQAv9Rg==",
+  "dgSpecHash": "IOx15Eu/kHLIOQ9r/CDgRS65Rg6+X4b783VVgp2ZoW/EGRzAOENW2kYo2nCYouOyEbL/GbYwE+QT6DaHQiDr2Q==",
   "success": true,
-  "projectFilePath": "D:\\WorkSpace\\Repos\\GitHup\\CSharpWeb\\TheClub\\ClubUI\\ClubUI.csproj",
+  "projectFilePath": "D:\\WorkSpace\\Repos\\GitHup\\TheClub\\ClubUI\\ClubUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

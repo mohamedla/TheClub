@@ -2,6 +2,7 @@
 using ClubAPI.ActionFilter;
 using ClubAPI.ActionFilter.GeneralCodes;
 using ClubContracts;
+using ClubEntities.DataTransferObjects.ReferenceCodes;
 using ClubEntities.DataTransferObjects.TitleCodes;
 using ClubModels.Models.GeneralCodes;
 using Microsoft.AspNetCore.Mvc;
@@ -28,8 +29,8 @@ namespace ClubAPI.Controllers.GeneralCodes
         public async Task<IActionResult> GetAllTitles()
         {
             var titles = await _repository.TitleCode.GetAllAsync(false);
-
-            return Ok(titles);
+            var titlesDTO = _mapper.Map<IEnumerable<TitleCodeDTO>>(titles);
+            return Ok(titlesDTO);
         }
 
         [HttpPost("", Name = nameof(AddTitle))]

@@ -66,6 +66,7 @@ namespace ClubModels.Models.GeneralCodes
 
         [Required(ErrorMessage = "The Reserve Fee Is Required")]
         public bool ReserveFee { get; set; } = false;
+        public virtual IEnumerable<Member>? Members { get; set; }
         public override SectionCode Clone()
             => new SectionCode
             {

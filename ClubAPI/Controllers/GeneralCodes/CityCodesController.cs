@@ -28,8 +28,9 @@ namespace ClubAPI.Controllers.GeneralCodes
         public async Task<IActionResult> GetAllCities()
         {
             var cities = await _repository.CityCode.GetAllAsync(false);
+            var citiesDTO = _mapper.Map<IEnumerable<CityCodeDTO>>(cities);
 
-            return Ok(cities);
+            return Ok(citiesDTO);
         }
 
         [HttpPost("", Name = nameof(AddCity))]

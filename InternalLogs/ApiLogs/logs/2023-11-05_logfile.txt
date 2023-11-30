@@ -1,0 +1,12 @@
+2023-11-05 00:00:16.6258 ERROR No ClubModels.Models.GeneralCodes.CityCode Code With Id : dcb7eaaa-4125-44b3-8ea8-bd6a2c022810 Exist In The Database
+2023-11-05 00:10:22.9730 ERROR No ClubModels.Models.GeneralCodes.CityCode Code With Id : 649905db-b41a-46dc-83d0-45cffa32ea50 Exist In The Database
+2023-11-05 00:10:52.4147 ERROR No ClubModels.Models.GeneralCodes.CityCode Code With Id : 649905db-b41a-46dc-83d0-05cffa32ea55 Exist In The Database
+2023-11-05 00:11:02.2016 ERROR No ClubModels.Models.GeneralCodes.MartialStatusCode Code With Id : 1d0915ec-8837-4567-99cd-9629fb7ec8d0 Exist In The Database
+2023-11-05 00:43:45.8377 ERROR No Member With Id : 65569b25-32e7-4c71-5167-08dbda20bbc0 Exist In The Database
+2023-11-05 00:43:56.8359 ERROR No ClubModels.Models.GeneralCodes.CityCode Code With Id : dcb7eaaa-4125-44b3-8ea8-bd6a2c022810 Exist In The Database
+2023-11-05 00:45:05.8817 ERROR No Member With Id : 65569b25-32e7-4c71-5167-08dbda20bbc0 Exist In The Database
+2023-11-05 00:45:21.7320 ERROR No Member With Id : 65569b25-32e7-4c71-5167-08dbda20bbc3 Exist In The Database
+2023-11-05 01:36:35.2355 ERROR No Member With Id : a7f3d3ac-60f9-415e-2190-08dbdd87bd80 Exist In The Database
+2023-11-05 01:37:53.1103 ERROR No Member With Id : a7f3d3ac-60f9-415e-2190-08dbdd87bd80 Exist In The Database
+2023-11-05 01:38:50.8255 ERROR No Member With Id : a7f3d3ac-60f9-415e-2190-08dbdd87bd80 Exist In The Database
+2023-11-05 01:41:04.1570 ERROR No Member With Id : a7f3d3ac-60f9-415e-2190-08dbdd87bd80 Exist In The Database

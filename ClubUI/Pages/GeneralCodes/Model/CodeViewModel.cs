@@ -96,7 +96,7 @@ namespace ClubUI.Pages.GeneralCodes.Model
                 else
                 {
                     var newEntity = Mapper.Map<TEDTO>(SelectedEntity);
-                    var response = await Http.PutAsJsonAsync($"{APIURL}/{SelectedEntity.Id}", SelectedEntity);
+                    var response = await Http.PutAsJsonAsync($"{APIURL}/{SelectedEntity.Id}", newEntity);
                     var content = response.Content.ReadAsStream();
                     if (!response.IsSuccessStatusCode)
                     {

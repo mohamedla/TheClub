@@ -42,261 +42,7 @@ namespace ClubAPI.Migrations
                     b.HasIndex("Code")
                         .IsUnique();
 
-                    b.ToTable("cityCodes", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("7536bc70-8ac5-4728-9a4f-59124aae6293"),
-                            Code = 1,
-                            Name = "القاهرة"
-                        },
-                        new
-                        {
-                            Id = new Guid("634cd61a-7a14-4a29-9816-c8274de8be71"),
-                            Code = 2,
-                            Name = "الجيزة"
-                        },
-                        new
-                        {
-                            Id = new Guid("b88b57e3-9cde-4a75-b06c-95d7947b0053"),
-                            Code = 3,
-                            Name = "البحيرة"
-                        },
-                        new
-                        {
-                            Id = new Guid("6c3dd9eb-6000-4469-8795-8b680edcb80b"),
-                            Code = 4,
-                            Name = "الشرقية"
-                        },
-                        new
-                        {
-                            Id = new Guid("e01e75cb-e663-4728-8e3e-f99d5916c350"),
-                            Code = 5,
-                            Name = "المنوفية"
-                        },
-                        new
-                        {
-                            Id = new Guid("46f9a402-6504-429f-b8d7-c6d9a5baf0a8"),
-                            Code = 6,
-                            Name = "مرسى مطروح"
-                        },
-                        new
-                        {
-                            Id = new Guid("9c381cc6-8344-4314-9437-bbeb11a81291"),
-                            Code = 7,
-                            Name = "دمياط"
-                        },
-                        new
-                        {
-                            Id = new Guid("e226e5ae-59a1-4c97-a48c-d9a5cc945018"),
-                            Code = 8,
-                            Name = "امبابه"
-                        },
-                        new
-                        {
-                            Id = new Guid("f51dd3e8-3c98-4017-8aa0-62a3a2c1e594"),
-                            Code = 9,
-                            Name = "البساتين"
-                        },
-                        new
-                        {
-                            Id = new Guid("ba1ec23c-3c49-4ec7-b5c9-91150334b87c"),
-                            Code = 10,
-                            Name = "القليوبية"
-                        },
-                        new
-                        {
-                            Id = new Guid("07240bde-4e8f-4ebc-ac27-54502500b5fb"),
-                            Code = 11,
-                            Name = "شبرا الخيمه"
-                        },
-                        new
-                        {
-                            Id = new Guid("18cfc55b-c89a-44e6-a4b4-0d116dde5096"),
-                            Code = 12,
-                            Name = "سوهاج"
-                        },
-                        new
-                        {
-                            Id = new Guid("e0a69a1b-25f4-4f81-8078-4f5b90f0bdaf"),
-                            Code = 13,
-                            Name = "ميت غمرة"
-                        },
-                        new
-                        {
-                            Id = new Guid("ae8d5e41-9a1f-4920-a117-eb8b0de7e525"),
-                            Code = 14,
-                            Name = "بنى سويف"
-                        },
-                        new
-                        {
-                            Id = new Guid("06dcf5cd-0a3f-4f96-9eb9-56f0190c53e3"),
-                            Code = 15,
-                            Name = "الفيوم"
-                        },
-                        new
-                        {
-                            Id = new Guid("ce36d38f-13b6-4d6f-bf97-32dd1b29c6fa"),
-                            Code = 16,
-                            Name = "اسيوط"
-                        },
-                        new
-                        {
-                            Id = new Guid("82d4e3b6-fb60-4719-b529-5c628e27ff4f"),
-                            Code = 17,
-                            Name = "المنيا"
-                        },
-                        new
-                        {
-                            Id = new Guid("24c418e7-86d8-4834-82e3-19ec2e4094d4"),
-                            Code = 18,
-                            Name = "الفيوم"
-                        },
-                        new
-                        {
-                            Id = new Guid("dfd2e4c3-6581-4e2d-829b-ad74a3363ce8"),
-                            Code = 19,
-                            Name = "الغربيه"
-                        },
-                        new
-                        {
-                            Id = new Guid("18da8b77-bbd0-4f97-965e-610339b088ed"),
-                            Code = 20,
-                            Name = "الاسماعلية"
-                        },
-                        new
-                        {
-                            Id = new Guid("29c38916-a083-4cba-8260-0baa7517a782"),
-                            Code = 21,
-                            Name = "الدقهليه"
-                        },
-                        new
-                        {
-                            Id = new Guid("9844498a-33c0-4ca4-a605-25c3f228000c"),
-                            Code = 22,
-                            Name = "قليوب"
-                        },
-                        new
-                        {
-                            Id = new Guid("267bbbe3-a007-4478-8965-7d0646a37c20"),
-                            Code = 23,
-                            Name = "بورسعيد"
-                        },
-                        new
-                        {
-                            Id = new Guid("4d115be2-fde6-489d-869a-e54337df436e"),
-                            Code = 24,
-                            Name = "طنطا"
-                        },
-                        new
-                        {
-                            Id = new Guid("cdd40b00-6995-4a1f-9431-4645ed7d1cbb"),
-                            Code = 25,
-                            Name = "الاسكندريه"
-                        },
-                        new
-                        {
-                            Id = new Guid("e9a6ff1e-5ee2-4d6e-94ec-826ada54534c"),
-                            Code = 26,
-                            Name = "دمنهور"
-                        },
-                        new
-                        {
-                            Id = new Guid("82bd8a78-940f-46ee-a240-85de6a76de4a"),
-                            Code = 27,
-                            Name = "الوادى الجديد"
-                        },
-                        new
-                        {
-                            Id = new Guid("2eea0440-d110-430a-90bf-6d6798595898"),
-                            Code = 28,
-                            Name = "الاقصر"
-                        },
-                        new
-                        {
-                            Id = new Guid("5e1df4ff-fa4f-4d06-bbc1-e40639ab5374"),
-                            Code = 29,
-                            Name = "المحله"
-                        },
-                        new
-                        {
-                            Id = new Guid("2958e058-f4f7-487c-a2fd-ad088903e2f3"),
-                            Code = 30,
-                            Name = "كفر الشيخ"
-                        },
-                        new
-                        {
-                            Id = new Guid("3722ac05-4590-4c91-8958-488850847ff1"),
-                            Code = 31,
-                            Name = "المنصوره"
-                        },
-                        new
-                        {
-                            Id = new Guid("525820bb-6a1d-4875-8824-59dd00ac1412"),
-                            Code = 32,
-                            Name = "قنا"
-                        },
-                        new
-                        {
-                            Id = new Guid("10d447e0-1185-4cbe-852d-34ace2b4bb76"),
-                            Code = 33,
-                            Name = "بنها"
-                        },
-                        new
-                        {
-                            Id = new Guid("1a715319-6bb5-4ef1-a332-55280e099894"),
-                            Code = 34,
-                            Name = "السويس"
-                        },
-                        new
-                        {
-                            Id = new Guid("45378d93-09d1-4a63-91fa-48cbd416f0a9"),
-                            Code = 35,
-                            Name = "اسوان"
-                        },
-                        new
-                        {
-                            Id = new Guid("636a12f7-5b0a-404c-8485-5ed677716e71"),
-                            Code = 36,
-                            Name = "شبين الكوم"
-                        },
-                        new
-                        {
-                            Id = new Guid("778e620b-2c3a-4b08-a799-f97674b164a5"),
-                            Code = 37,
-                            Name = "القاهره"
-                        },
-                        new
-                        {
-                            Id = new Guid("93e45f77-9914-4e17-abe4-2122d85ce7d6"),
-                            Code = 38,
-                            Name = "طهران"
-                        },
-                        new
-                        {
-                            Id = new Guid("009541de-d482-4522-9fd0-b22c2c872bf0"),
-                            Code = 39,
-                            Name = "جنوب سيناء"
-                        },
-                        new
-                        {
-                            Id = new Guid("6e9dfb6e-f153-4958-8213-143f633cc14c"),
-                            Code = 40,
-                            Name = "الامارات"
-                        },
-                        new
-                        {
-                            Id = new Guid("bdbbe8c9-f77d-4ad7-b193-706ebcc39616"),
-                            Code = 41,
-                            Name = "البحر الاحمر"
-                        },
-                        new
-                        {
-                            Id = new Guid("c814befe-1fd2-458e-86c1-4c9c1dd4c793"),
-                            Code = 42,
-                            Name = "القاهرة"
-                        });
+                    b.ToTable("cityCodes");
                 });
 
             modelBuilder.Entity("ClubModels.Models.GeneralCodes.GenderCode", b =>
@@ -319,27 +65,7 @@ namespace ClubAPI.Migrations
                     b.HasIndex("Code")
                         .IsUnique();
 
-                    b.ToTable("genderCodes", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("a01bb913-31c8-4e5d-848b-c9e288310a3c"),
-                            Code = 1,
-                            Name = "ذكر"
-                        },
-                        new
-                        {
-                            Id = new Guid("38eff8ef-adb0-4b2f-85a3-f37164fb2ce1"),
-                            Code = 2,
-                            Name = "أنثى"
-                        },
-                        new
-                        {
-                            Id = new Guid("b6cacf0e-eec4-4b08-a92c-9359d287cf36"),
-                            Code = 3,
-                            Name = "غير معروف"
-                        });
+                    b.ToTable("genderCodes");
                 });
 
             modelBuilder.Entity("ClubModels.Models.GeneralCodes.JobCode", b =>
@@ -362,345 +88,7 @@ namespace ClubAPI.Migrations
                     b.HasIndex("Code")
                         .IsUnique();
 
-                    b.ToTable("jobCodes", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("84ade46d-4349-45e3-9949-a8ba5b30ec4c"),
-                            Code = 389,
-                            Name = "مساعد قائد قطار"
-                        },
-                        new
-                        {
-                            Id = new Guid("a62afa78-f26c-44a2-bc09-5ee8daab2f8c"),
-                            Code = 396,
-                            Name = "قائد قطار"
-                        },
-                        new
-                        {
-                            Id = new Guid("57eb5078-3a41-4771-a8a7-5724de11e7fd"),
-                            Code = 267,
-                            Name = "رئيس قطار"
-                        },
-                        new
-                        {
-                            Id = new Guid("1358577c-2be9-40de-87c8-9c07c4828f11"),
-                            Code = 4,
-                            Name = "معاش"
-                        },
-                        new
-                        {
-                            Id = new Guid("68f28c85-cf7c-46a0-8e21-41f6654ecbea"),
-                            Code = 5,
-                            Name = "محاسب"
-                        },
-                        new
-                        {
-                            Id = new Guid("537e4c22-d1c9-49bf-ab45-03c369094ed3"),
-                            Code = 6,
-                            Name = "مهندس"
-                        },
-                        new
-                        {
-                            Id = new Guid("5b19aa4b-2fa2-49fc-b1cf-108173460057"),
-                            Code = 7,
-                            Name = "دكتور"
-                        },
-                        new
-                        {
-                            Id = new Guid("ac31dc5a-3b54-48b2-a613-e45eeafdaf6f"),
-                            Code = 1,
-                            Name = "المالية"
-                        },
-                        new
-                        {
-                            Id = new Guid("94c21495-3687-49f4-bce7-6baed26d1d16"),
-                            Code = 2,
-                            Name = "الموارد البشريه"
-                        },
-                        new
-                        {
-                            Id = new Guid("a01494dc-472c-4dc1-a307-e2bc3e41bf8b"),
-                            Code = 3,
-                            Name = "قطاع البضائع"
-                        },
-                        new
-                        {
-                            Id = new Guid("8cae9526-edd6-4b6e-bf74-7f9c0f5c42c8"),
-                            Code = 20,
-                            Name = "ميكانيكى"
-                        },
-                        new
-                        {
-                            Id = new Guid("9fa16568-9d27-4da9-893c-e97a8469b592"),
-                            Code = 21,
-                            Name = "خراط"
-                        },
-                        new
-                        {
-                            Id = new Guid("5e105c5c-c2cd-4aa8-9772-fe19a0b3b409"),
-                            Code = 30,
-                            Name = "ملاحظ"
-                        },
-                        new
-                        {
-                            Id = new Guid("82c9b89d-ada7-4c2e-b062-d255aa6d81f6"),
-                            Code = 23,
-                            Name = "فنى"
-                        },
-                        new
-                        {
-                            Id = new Guid("e8092075-ee75-43e8-ae85-ddcb56cc999f"),
-                            Code = 26,
-                            Name = "ملاحظ"
-                        },
-                        new
-                        {
-                            Id = new Guid("3f06b295-ccdd-4503-b794-b84f89c85575"),
-                            Code = 50,
-                            Name = "سائق"
-                        },
-                        new
-                        {
-                            Id = new Guid("9ebe15a5-5cca-49e3-b961-b08ca7614c10"),
-                            Code = 51,
-                            Name = "كهربائي"
-                        },
-                        new
-                        {
-                            Id = new Guid("66cfa577-ed8f-4722-adf7-a2a3764263a5"),
-                            Code = 52,
-                            Name = "نقاش"
-                        },
-                        new
-                        {
-                            Id = new Guid("aa53f520-4cc5-453b-a480-e1dcf945370e"),
-                            Code = 53,
-                            Name = "سباك"
-                        },
-                        new
-                        {
-                            Id = new Guid("0b46df92-a8c9-41ff-8cd3-dd67ccdb3537"),
-                            Code = 54,
-                            Name = "نجار"
-                        },
-                        new
-                        {
-                            Id = new Guid("0783984f-b961-454a-aca9-442ed5369fa9"),
-                            Code = 55,
-                            Name = "لحام"
-                        },
-                        new
-                        {
-                            Id = new Guid("92c1a1a9-68fa-4782-9ab1-9deb54b354a0"),
-                            Code = 56,
-                            Name = "صراف تذاكر"
-                        },
-                        new
-                        {
-                            Id = new Guid("c20b3336-0e26-4a05-87c3-cc8ee5cf86e8"),
-                            Code = 57,
-                            Name = "تمريض"
-                        },
-                        new
-                        {
-                            Id = new Guid("d4e60bf8-3e9b-4340-a400-e78bc5021544"),
-                            Code = 58,
-                            Name = "موظف"
-                        },
-                        new
-                        {
-                            Id = new Guid("e2c1868e-a240-4f8e-9e90-0f8d89060005"),
-                            Code = 59,
-                            Name = "مشرف قطار"
-                        },
-                        new
-                        {
-                            Id = new Guid("b3bb4e81-d128-445d-af31-58c71ff196b6"),
-                            Code = 60,
-                            Name = "ناظر محطه"
-                        },
-                        new
-                        {
-                            Id = new Guid("5b232db8-9ef6-4dc9-997d-c62754461a26"),
-                            Code = 61,
-                            Name = "فحص مالى"
-                        },
-                        new
-                        {
-                            Id = new Guid("95c4a099-bdef-4aad-8c1d-a179f0e14252"),
-                            Code = 100,
-                            Name = "كاتب"
-                        },
-                        new
-                        {
-                            Id = new Guid("e4e1cb9d-137a-4c2f-bf80-275418caf551"),
-                            Code = 101,
-                            Name = "مدير عام"
-                        },
-                        new
-                        {
-                            Id = new Guid("5af163cf-4257-4630-80ca-6ab58373d773"),
-                            Code = 103,
-                            Name = "اشارات مصر"
-                        },
-                        new
-                        {
-                            Id = new Guid("1cc344c9-8f3b-4fae-a050-ee48a4be3948"),
-                            Code = 104,
-                            Name = "هندسة الاشارات"
-                        },
-                        new
-                        {
-                            Id = new Guid("9bfbc900-9521-4882-b556-389d9b97f0b6"),
-                            Code = 106,
-                            Name = "كاتبة"
-                        },
-                        new
-                        {
-                            Id = new Guid("4559f67d-d1b4-4416-98dc-2824f3ea125b"),
-                            Code = 107,
-                            Name = "كاتبة"
-                        },
-                        new
-                        {
-                            Id = new Guid("1cefb3a0-6939-4b7d-a87c-bb0841c801f0"),
-                            Code = 109,
-                            Name = "رئيس قسم"
-                        },
-                        new
-                        {
-                            Id = new Guid("feadcab5-94cc-4a12-8229-a0df3e1e24f3"),
-                            Code = 110,
-                            Name = "براد"
-                        },
-                        new
-                        {
-                            Id = new Guid("b7a359a8-68ab-4d05-b8b0-2398d643a98f"),
-                            Code = 121,
-                            Name = "بناء افران"
-                        },
-                        new
-                        {
-                            Id = new Guid("d48d7dae-032c-461a-a85c-6890128b24ba"),
-                            Code = 180,
-                            Name = "عامل"
-                        },
-                        new
-                        {
-                            Id = new Guid("4baf9798-396e-4267-8475-6b9ef519707b"),
-                            Code = 157,
-                            Name = "حداد"
-                        },
-                        new
-                        {
-                            Id = new Guid("7f1d7c8b-b9c1-4d5a-b7fd-4107ea1cba8c"),
-                            Code = 158,
-                            Name = "حرفى"
-                        },
-                        new
-                        {
-                            Id = new Guid("1ea2e84a-74f0-4eb5-b7a3-699e7a623671"),
-                            Code = 200,
-                            Name = "مراقب ابراج"
-                        },
-                        new
-                        {
-                            Id = new Guid("c25447e2-ed26-4505-b1ee-db50d7428596"),
-                            Code = 201,
-                            Name = "سروجى"
-                        },
-                        new
-                        {
-                            Id = new Guid("7a3abca0-e4db-4bed-91de-5074cbe745a0"),
-                            Code = 202,
-                            Name = "مضيف قطار"
-                        },
-                        new
-                        {
-                            Id = new Guid("c255ac95-1f88-4b6d-ad15-3097182f867c"),
-                            Code = 203,
-                            Name = "طباع"
-                        },
-                        new
-                        {
-                            Id = new Guid("90a34396-44bf-4b4d-8dae-3414e0acbc29"),
-                            Code = 102,
-                            Name = "امين مخزن"
-                        },
-                        new
-                        {
-                            Id = new Guid("11560d59-b426-4147-a24d-6af60525e7d6"),
-                            Code = 0,
-                            Name = "خدمات معاونه"
-                        },
-                        new
-                        {
-                            Id = new Guid("8f2b6104-b509-4803-96f8-63a0deb1b25b"),
-                            Code = 500,
-                            Name = "مفتش"
-                        },
-                        new
-                        {
-                            Id = new Guid("f7d52487-9c6e-443e-93c6-8b2bddc592ed"),
-                            Code = 400,
-                            Name = "مدير ادارة"
-                        },
-                        new
-                        {
-                            Id = new Guid("8845c82d-c9d9-420e-b48f-f8936194bac2"),
-                            Code = 401,
-                            Name = "محقق قانوني"
-                        },
-                        new
-                        {
-                            Id = new Guid("5cd941e1-f8d1-4cca-a002-ba1c7de1f9ae"),
-                            Code = 402,
-                            Name = "نائب رئيس مجلس الاداره"
-                        },
-                        new
-                        {
-                            Id = new Guid("88a57bb9-ebf8-4b00-a48d-5ce7f64b6093"),
-                            Code = 403,
-                            Name = "رئيس إدارة مركزية"
-                        },
-                        new
-                        {
-                            Id = new Guid("7b7ad2e3-1763-4b4b-ba34-b23a42b56cd5"),
-                            Code = 70,
-                            Name = "مراقب"
-                        },
-                        new
-                        {
-                            Id = new Guid("4bb8ba36-0b44-42ba-8a8d-7a86e5f83e14"),
-                            Code = 80,
-                            Name = "أخرى"
-                        },
-                        new
-                        {
-                            Id = new Guid("2923f60e-e820-491a-9d8c-b230822e2398"),
-                            Code = 81,
-                            Name = "ن . مالية"
-                        },
-                        new
-                        {
-                            Id = new Guid("d828e2b3-09a7-4a72-872a-5819deffafb6"),
-                            Code = 111,
-                            Name = "رئيس حركه"
-                        },
-                        new
-                        {
-                            Id = new Guid("1cd19904-a616-48e2-a2ea-54ebc583bc19"),
-                            Code = 300,
-                            Name = "اداري"
-                        },
-                        new
-                        {
-                            Id = new Guid("0a2dd510-285e-456e-81ca-0258160d2f2d"),
-                            Code = 301,
-                            Name = "محامي"
-                        });
+                    b.ToTable("jobCodes");
                 });
 
             modelBuilder.Entity("ClubModels.Models.GeneralCodes.MartialStatusCode", b =>
@@ -723,33 +111,7 @@ namespace ClubAPI.Migrations
                     b.HasIndex("Code")
                         .IsUnique();
 
-                    b.ToTable("martialStatusCodes", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("d1a67026-f19c-4521-ae7b-4cf2a425f20e"),
-                            Code = 1,
-                            Name = "أعزب"
-                        },
-                        new
-                        {
-                            Id = new Guid("c39918dc-ee43-4d6d-88b6-9e13f338d9a9"),
-                            Code = 2,
-                            Name = "متزوج/ة"
-                        },
-                        new
-                        {
-                            Id = new Guid("0ea4f976-1178-482d-818c-81edb1cd7184"),
-                            Code = 3,
-                            Name = "مطلق/ة"
-                        },
-                        new
-                        {
-                            Id = new Guid("3beffca8-e182-486e-82ad-1bb89bd6142e"),
-                            Code = 4,
-                            Name = "أرمل/ة"
-                        });
+                    b.ToTable("martialStatusCodes");
                 });
 
             modelBuilder.Entity("ClubModels.Models.GeneralCodes.MembershipCode", b =>
@@ -772,45 +134,7 @@ namespace ClubAPI.Migrations
                     b.HasIndex("Code")
                         .IsUnique();
 
-                    b.ToTable("membershipCodes", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("a9e48d2c-99e0-46cb-8105-e24c2d684508"),
-                            Code = 1,
-                            Name = "عضو عامل"
-                        },
-                        new
-                        {
-                            Id = new Guid("958ddaeb-3f45-402d-8000-84d7b0cf9e37"),
-                            Code = 10,
-                            Name = "عضو زائر"
-                        },
-                        new
-                        {
-                            Id = new Guid("0e907e7a-e30e-4ad7-8335-54fea461958f"),
-                            Code = 3,
-                            Name = "عضوية فخرية"
-                        },
-                        new
-                        {
-                            Id = new Guid("84f2e487-f82a-4a67-8cf6-4475fa29cbd4"),
-                            Code = 9,
-                            Name = "عضو زائر  (مؤقت)"
-                        },
-                        new
-                        {
-                            Id = new Guid("6f96f34f-c1ab-4fcb-83cb-503ab24d912f"),
-                            Code = 8,
-                            Name = "عضويه موسمية"
-                        },
-                        new
-                        {
-                            Id = new Guid("1b3cecc4-cbab-40b2-9eb6-f6fd4ee32adf"),
-                            Code = 2,
-                            Name = "عضو عامل خ"
-                        });
+                    b.ToTable("membershipCodes");
                 });
 
             modelBuilder.Entity("ClubModels.Models.GeneralCodes.NationalityCode", b =>
@@ -833,33 +157,7 @@ namespace ClubAPI.Migrations
                     b.HasIndex("Code")
                         .IsUnique();
 
-                    b.ToTable("nationalityCodes", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("b56380cf-662f-4d8f-87f3-180b4b12aac7"),
-                            Code = 1,
-                            Name = "مصرى/ة"
-                        },
-                        new
-                        {
-                            Id = new Guid("13e9c482-421e-465e-88e0-1a36bec29b83"),
-                            Code = 2,
-                            Name = "سعودى/ة"
-                        },
-                        new
-                        {
-                            Id = new Guid("6b80e1fe-be90-480d-869b-5d0efaeb4b61"),
-                            Code = 3,
-                            Name = "كويتى/ة"
-                        },
-                        new
-                        {
-                            Id = new Guid("85422937-2c0b-4a90-8a9f-3a842b573b03"),
-                            Code = 4,
-                            Name = "إماراتى/ة"
-                        });
+                    b.ToTable("nationalityCodes");
                 });
 
             modelBuilder.Entity("ClubModels.Models.GeneralCodes.QualificationCode", b =>
@@ -882,57 +180,7 @@ namespace ClubAPI.Migrations
                     b.HasIndex("Code")
                         .IsUnique();
 
-                    b.ToTable("QualCodes", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("fd1b0949-2190-44b8-aa9b-8b73aa8043cd"),
-                            Code = 1,
-                            Name = "مؤهل فوق عالى"
-                        },
-                        new
-                        {
-                            Id = new Guid("127c50b0-95f3-4ccd-af5a-b729e4b88d78"),
-                            Code = 2,
-                            Name = "مؤهل عالى"
-                        },
-                        new
-                        {
-                            Id = new Guid("892169a5-5194-4fb3-bff8-6a4e1b039185"),
-                            Code = 3,
-                            Name = "مؤهل فوق المتوسط"
-                        },
-                        new
-                        {
-                            Id = new Guid("1ce021b5-1518-46eb-8321-30407f445070"),
-                            Code = 4,
-                            Name = "مؤهل متوسط"
-                        },
-                        new
-                        {
-                            Id = new Guid("aaeb865d-3b8f-4117-9fda-575a2a943c23"),
-                            Code = 5,
-                            Name = "بدون مؤهل"
-                        },
-                        new
-                        {
-                            Id = new Guid("ea2f9929-de61-47da-b465-7f1edaa5b051"),
-                            Code = 6,
-                            Name = "طالب"
-                        },
-                        new
-                        {
-                            Id = new Guid("c464850e-9059-4c02-a588-2a5793b37b1b"),
-                            Code = 7,
-                            Name = "طالبة"
-                        },
-                        new
-                        {
-                            Id = new Guid("5e8173f3-a1c6-4d53-a8cf-20469a50d245"),
-                            Code = 300,
-                            Name = "محامي"
-                        });
+                    b.ToTable("QualCodes");
                 });
 
             modelBuilder.Entity("ClubModels.Models.GeneralCodes.ReferenceCode", b =>
@@ -962,705 +210,7 @@ namespace ClubAPI.Migrations
                     b.HasIndex("Code")
                         .IsUnique();
 
-                    b.ToTable("RefCodes", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("f4ccc50b-253a-4f2c-b4ef-7d178a90f29a"),
-                            AgeFlag = false,
-                            Code = 1,
-                            Name = "والد",
-                            ReferenceFee = 15.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("ab378d74-29d5-4f28-b44b-d62c132073d5"),
-                            AgeFlag = false,
-                            Code = 2,
-                            Name = "والدة",
-                            ReferenceFee = 15.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("014e7c54-f872-44b2-829c-b6c852cd7af5"),
-                            AgeFlag = false,
-                            Code = 3,
-                            Name = "زوجة",
-                            ReferenceFee = 15.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("b3d3c54d-b8df-4a9d-b633-c63ba02a1091"),
-                            AgeFlag = false,
-                            Code = 4,
-                            Name = "زوج",
-                            ReferenceFee = 15.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("6bbfb87a-cc3f-4f01-bec9-b0c5f8e8f118"),
-                            AgeFlag = true,
-                            Code = 5,
-                            Name = "إبن",
-                            ReferenceFee = 10.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("96c1960b-c3ab-4659-84b2-5bd83cfc6520"),
-                            AgeFlag = true,
-                            Code = 6,
-                            Name = "إبن",
-                            ReferenceFee = 10.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("953b356d-56e9-426e-857f-b7a96f38e193"),
-                            AgeFlag = true,
-                            Code = 7,
-                            Name = "بنت",
-                            ReferenceFee = 10.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("a74a894d-1aa0-41db-8edc-266c7d4e2166"),
-                            AgeFlag = true,
-                            Code = 8,
-                            Name = "بنت",
-                            ReferenceFee = 10.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("b355548d-77b3-458d-bf3a-9ccb0aadb294"),
-                            AgeFlag = false,
-                            Code = 9,
-                            Name = "زوجة ثانية",
-                            ReferenceFee = 40.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("ce50713f-cdac-48fe-863a-35d502f26dbb"),
-                            AgeFlag = false,
-                            Code = 10,
-                            Name = "أخ",
-                            ReferenceFee = 0.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("e507b0c4-0600-4ba5-aee3-270b3e12d109"),
-                            AgeFlag = false,
-                            Code = 11,
-                            Name = "أخت",
-                            ReferenceFee = 15.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("b48ed898-dc22-4889-aac2-06bf2e09fc0e"),
-                            AgeFlag = true,
-                            Code = 12,
-                            Name = "أخت مطلقة",
-                            ReferenceFee = 15.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("13528a60-f47b-4b11-9b70-dffcc90650d0"),
-                            AgeFlag = true,
-                            Code = 13,
-                            Name = "بنت أخ",
-                            ReferenceFee = 22.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("4aeedd9e-fe0b-448e-9a69-85567599fd98"),
-                            AgeFlag = true,
-                            Code = 14,
-                            Name = "ابن اخت",
-                            ReferenceFee = 22.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("e212265b-f883-44f1-96d4-7ee5475f2cfa"),
-                            AgeFlag = true,
-                            Code = 15,
-                            Name = "بنت اخت",
-                            ReferenceFee = 22.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("757dc3cb-be23-470a-bbcf-e115e35cd96a"),
-                            AgeFlag = false,
-                            Code = 16,
-                            Name = "خال",
-                            ReferenceFee = 22.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("73bafe0c-fea6-44ba-9dc8-3524c11791e4"),
-                            AgeFlag = false,
-                            Code = 17,
-                            Name = "خاله",
-                            ReferenceFee = 22.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("470871a0-e656-4fec-b456-e5a302ac11ac"),
-                            AgeFlag = false,
-                            Code = 18,
-                            Name = "عم",
-                            ReferenceFee = 22.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("88c42880-5798-4ee0-a47d-c762cf70c8c7"),
-                            AgeFlag = false,
-                            Code = 19,
-                            Name = "عمه",
-                            ReferenceFee = 22.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("d561339d-ca59-4ba6-9393-97e6772cbec2"),
-                            AgeFlag = true,
-                            Code = 20,
-                            Name = "ابن عم",
-                            ReferenceFee = 22.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("8133624e-c677-493c-8403-fd4bbf9153e5"),
-                            AgeFlag = true,
-                            Code = 21,
-                            Name = "بنت عم",
-                            ReferenceFee = 22.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("c7887a3b-cc40-4f0c-880d-adcdd775f1eb"),
-                            AgeFlag = true,
-                            Code = 22,
-                            Name = "ابن خاله",
-                            ReferenceFee = 22.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("84c02d9f-e7ca-41d3-b3dd-e365af48053a"),
-                            AgeFlag = true,
-                            Code = 23,
-                            Name = "بنت خاله",
-                            ReferenceFee = 22.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("6509f969-8057-4a86-b3e6-d3c01e418fae"),
-                            AgeFlag = true,
-                            Code = 24,
-                            Name = "حفيد",
-                            ReferenceFee = 22.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("c92608e6-1f90-4fd2-978e-0a488b9ea71e"),
-                            AgeFlag = true,
-                            Code = 25,
-                            Name = "حفيده",
-                            ReferenceFee = 22.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("6d147227-07fe-4563-bf46-6735fe5a5f1c"),
-                            AgeFlag = true,
-                            Code = 26,
-                            Name = "ابن بالتبنى",
-                            ReferenceFee = 22.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("b7f13ed4-c5e2-48e7-bf6d-acf7f3525a67"),
-                            AgeFlag = true,
-                            Code = 27,
-                            Name = "بنت بالتبنى",
-                            ReferenceFee = 22.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("9bc61c09-c743-45aa-b080-69cd299fadfa"),
-                            AgeFlag = false,
-                            Code = 41,
-                            Name = "والد تخفيض",
-                            ReferenceFee = 11.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("76e79712-edbf-4f2c-b8f2-5d3e6e426324"),
-                            AgeFlag = false,
-                            Code = 42,
-                            Name = "والده تخفيض",
-                            ReferenceFee = 11.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("99e9c462-f1c5-4d6e-9b28-c23e36d7531e"),
-                            AgeFlag = false,
-                            Code = 43,
-                            Name = "زوجه تخفيض",
-                            ReferenceFee = 4.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("7bb7fdbf-e2cb-479f-8456-4a8ba5c9ade5"),
-                            AgeFlag = false,
-                            Code = 44,
-                            Name = "زوج تخفيض",
-                            ReferenceFee = 4.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("9ebf83fb-5706-4495-870b-89993d6cde36"),
-                            AgeFlag = true,
-                            Code = 45,
-                            Name = "ابن فوق ال 16 تخفيض",
-                            ReferenceFee = 3.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("910cb786-3f3c-4fa0-94a2-a1e87f742249"),
-                            AgeFlag = false,
-                            Code = 46,
-                            Name = "ابن تحت ال 16 تخفيض",
-                            ReferenceFee = 1.5m
-                        },
-                        new
-                        {
-                            Id = new Guid("4bd6b648-8db6-4e0a-bdcd-4876fe5215d8"),
-                            AgeFlag = true,
-                            Code = 47,
-                            Name = "بنت فوق الـ 16 تخفيض",
-                            ReferenceFee = 3.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("6ae11b67-a2a3-457b-98d0-ab1f1a2f2e23"),
-                            AgeFlag = false,
-                            Code = 48,
-                            Name = "بنت تحت الـ 16 تخفيض",
-                            ReferenceFee = 1.5m
-                        },
-                        new
-                        {
-                            Id = new Guid("54471b42-ea7a-40eb-b5f3-0af46123f677"),
-                            AgeFlag = false,
-                            Code = 49,
-                            Name = "زوجه ثانيه تخفيض",
-                            ReferenceFee = 11.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("7aefcfc0-dd23-40a6-ae85-92574deb2a4a"),
-                            AgeFlag = true,
-                            Code = 50,
-                            Name = "اخ تخفيض",
-                            ReferenceFee = 11.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("c3e904b4-196e-48cb-9df3-eb153d916440"),
-                            AgeFlag = false,
-                            Code = 51,
-                            Name = "اخت تخفيض",
-                            ReferenceFee = 11.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("2bbdd217-6a9c-4dfa-8a89-70e1d459ef11"),
-                            AgeFlag = true,
-                            Code = 52,
-                            Name = "ابن اخ تخفيض",
-                            ReferenceFee = 11.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("ba50a91c-3684-4f5a-8f52-7907bab29943"),
-                            AgeFlag = true,
-                            Code = 53,
-                            Name = "بنت اخ تخفيض",
-                            ReferenceFee = 11.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("683951d1-e153-4093-a496-7a3d7263645c"),
-                            AgeFlag = true,
-                            Code = 54,
-                            Name = "ابن اخت تخفيض",
-                            ReferenceFee = 22.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("b8073380-6363-419f-adb6-61b55f70e19f"),
-                            AgeFlag = true,
-                            Code = 55,
-                            Name = "بنت اخت تخفيض",
-                            ReferenceFee = 11.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("9c2c90e7-0f02-42e4-8206-0d65b39cf4a9"),
-                            AgeFlag = false,
-                            Code = 56,
-                            Name = "خال تخفيض",
-                            ReferenceFee = 11.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("068db146-ca2f-41a3-9941-aba1cee79830"),
-                            AgeFlag = false,
-                            Code = 57,
-                            Name = "خاله تخفيض",
-                            ReferenceFee = 11.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("4274ce66-7b53-411d-85d7-48583a054463"),
-                            AgeFlag = false,
-                            Code = 58,
-                            Name = "عم تخفيض",
-                            ReferenceFee = 11.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("a656be68-1b0b-4708-8374-608783b2b20b"),
-                            AgeFlag = false,
-                            Code = 59,
-                            Name = "عمه تخفيض",
-                            ReferenceFee = 11.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("ec46a654-4f17-4a1d-a71f-6f5b58b63af7"),
-                            AgeFlag = true,
-                            Code = 60,
-                            Name = "ابن عم تخفيض",
-                            ReferenceFee = 11.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("f10c4934-22d4-4926-80e6-885b270a861e"),
-                            AgeFlag = true,
-                            Code = 61,
-                            Name = "بنت عم تخفيض",
-                            ReferenceFee = 11.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("bc5a0d65-4cb7-4a2a-8355-ecfccbd88f1a"),
-                            AgeFlag = true,
-                            Code = 62,
-                            Name = "ابن خاله تخفيض",
-                            ReferenceFee = 11.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("c9e72297-bef4-4a96-beb7-4cb72726793a"),
-                            AgeFlag = true,
-                            Code = 63,
-                            Name = "بنت خاله تخفيض",
-                            ReferenceFee = 11.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("8239e143-d0a7-4b5e-91fe-cd82f46c5172"),
-                            AgeFlag = true,
-                            Code = 64,
-                            Name = "حفيد تخفيض",
-                            ReferenceFee = 11.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("44abfb06-0f46-41cc-97a1-12dc026ff8c4"),
-                            AgeFlag = true,
-                            Code = 65,
-                            Name = "حفيده تخفيض",
-                            ReferenceFee = 11.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("7944278d-9be5-4517-af95-49f6edd706d5"),
-                            AgeFlag = true,
-                            Code = 66,
-                            Name = "ابن بالتبنى تخفيض",
-                            ReferenceFee = 11.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("82eaa885-a102-41c6-a898-54192fda2405"),
-                            AgeFlag = true,
-                            Code = 67,
-                            Name = "بنت بالتبنى تخفيض",
-                            ReferenceFee = 11.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("423872f9-9007-47be-b56e-c5f0227efcd6"),
-                            AgeFlag = false,
-                            Code = 68,
-                            Name = "زوجه عضو فوق ال 60",
-                            ReferenceFee = 2.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("572d0365-8bda-46d6-9f3c-54937028924f"),
-                            AgeFlag = false,
-                            Code = 69,
-                            Name = "زوج عضوه فوق ال 60",
-                            ReferenceFee = 2.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("b3de94ad-1ddf-4475-a650-7c56e8e70eaa"),
-                            AgeFlag = false,
-                            Code = 70,
-                            Name = "زوجه محاربين قدماء",
-                            ReferenceFee = 0.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("29751f63-4052-46ce-98f1-ff72841af538"),
-                            AgeFlag = false,
-                            Code = 28,
-                            Name = "ابن الزوجه تحت 16",
-                            ReferenceFee = 3.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("fb2a0894-d45a-413e-924e-ae3a3c7bff1d"),
-                            AgeFlag = true,
-                            Code = 29,
-                            Name = "ابن الزوجه فوق ال 16",
-                            ReferenceFee = 6.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("8484d3e0-3fb9-408c-a887-30c02432c965"),
-                            AgeFlag = false,
-                            Code = 30,
-                            Name = "ابن الزوج تحت ال 16",
-                            ReferenceFee = 3.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("44d81ac5-a7ae-423f-9fd2-b760607a946a"),
-                            AgeFlag = true,
-                            Code = 31,
-                            Name = "ابن الزوج فوق ال 16",
-                            ReferenceFee = 6.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("9e1a2b80-b5b5-4818-91ee-8974bebb1e63"),
-                            AgeFlag = false,
-                            Code = 32,
-                            Name = "بنت الزوجه تحت 16",
-                            ReferenceFee = 3.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("5ad59e44-8192-4f88-a9e6-52a9282a7cb3"),
-                            AgeFlag = true,
-                            Code = 33,
-                            Name = "بنت الزوجه فوق 16",
-                            ReferenceFee = 6.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("9dc91991-c30d-4df2-87d8-23ce11f99916"),
-                            AgeFlag = false,
-                            Code = 34,
-                            Name = "بنت الزوج تحت ال 16",
-                            ReferenceFee = 3.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("6953377e-ff19-4d38-9220-816fd1311f04"),
-                            AgeFlag = true,
-                            Code = 35,
-                            Name = "بنت الزوج فوق ال 16",
-                            ReferenceFee = 6.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("ea6d1ee0-5b85-43a1-a81b-ca97a687349d"),
-                            AgeFlag = false,
-                            Code = 71,
-                            Name = "ابن الزوجه تحت الـ 16 تخفيض",
-                            ReferenceFee = 1.5m
-                        },
-                        new
-                        {
-                            Id = new Guid("84a89810-a620-4270-9e25-b09b5424f55c"),
-                            AgeFlag = true,
-                            Code = 72,
-                            Name = "ابن الزوجه فوق الـ 16 تخفيض",
-                            ReferenceFee = 3.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("531df614-869f-4c3c-9d93-74eeed98d2c8"),
-                            AgeFlag = false,
-                            Code = 73,
-                            Name = "ابن الزوج تحت 16 تخفيض",
-                            ReferenceFee = 1.5m
-                        },
-                        new
-                        {
-                            Id = new Guid("673d8930-284f-4207-a633-224ecb8da946"),
-                            AgeFlag = true,
-                            Code = 74,
-                            Name = "ابن الزوج فوق 16 تخفيض",
-                            ReferenceFee = 3.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("9ac55f18-5940-4ecf-9345-425a3dfd4ca8"),
-                            AgeFlag = false,
-                            Code = 75,
-                            Name = "بنت الزوجه تحت الـ 16 تخفيض",
-                            ReferenceFee = 1.5m
-                        },
-                        new
-                        {
-                            Id = new Guid("a8ac35be-bc9e-4c18-8b56-e2f4f23c656a"),
-                            AgeFlag = true,
-                            Code = 76,
-                            Name = "بنت الزوجه فوق الـ 16 تخفيض",
-                            ReferenceFee = 3.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("cfbd065e-8a87-465d-a50e-2501f2b6b166"),
-                            AgeFlag = false,
-                            Code = 77,
-                            Name = "بنت الزوج تحت 16 تخفيض",
-                            ReferenceFee = 1.5m
-                        },
-                        new
-                        {
-                            Id = new Guid("af954ef5-9503-46bf-b0c9-d957fdcc2da0"),
-                            AgeFlag = true,
-                            Code = 78,
-                            Name = "بنت الزوج فوق ال 16 تخفيض",
-                            ReferenceFee = 3.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("25881f9a-0c87-4add-962c-de7be1d3a584"),
-                            AgeFlag = false,
-                            Code = 79,
-                            Name = "زوجه شباب ورياضه",
-                            ReferenceFee = 0.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("ead8eb5d-565d-43b9-b3ad-1a9828dd2711"),
-                            AgeFlag = true,
-                            Code = 36,
-                            Name = "اخو الزوجه",
-                            ReferenceFee = 22.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("3ad4a9de-361d-4f3e-8d14-4d874cd05c40"),
-                            AgeFlag = false,
-                            Code = 37,
-                            Name = "اخت الزوجه",
-                            ReferenceFee = 22.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("9b8c4984-aa9a-4c9a-96b2-19926728aca3"),
-                            AgeFlag = true,
-                            Code = 38,
-                            Name = "اخ الزوج",
-                            ReferenceFee = 22.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("06cba4bd-eb99-46df-b99b-783ff9d8f7b2"),
-                            AgeFlag = false,
-                            Code = 39,
-                            Name = "اخت الزوج",
-                            ReferenceFee = 22.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("985e5d0c-8de2-4c39-b083-6ae9b2d22290"),
-                            AgeFlag = true,
-                            Code = 80,
-                            Name = "أخ الزوجه تخفيض",
-                            ReferenceFee = 11.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("b36e9b3f-6760-4f3d-b6a7-16e935e258e7"),
-                            AgeFlag = false,
-                            Code = 81,
-                            Name = "اخت الزوجه تخفيض",
-                            ReferenceFee = 11.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("1fe6df7a-7860-4670-b39d-11a2d4ab7ad7"),
-                            AgeFlag = true,
-                            Code = 82,
-                            Name = "اخ الزوج تخفيض",
-                            ReferenceFee = 11.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("0e9c9db9-5735-4609-8fe0-7480008d8af1"),
-                            AgeFlag = false,
-                            Code = 83,
-                            Name = "اخت الزوج تخفيض",
-                            ReferenceFee = 11.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("85f5f1b3-606c-479d-ac8b-2bcc8b443992"),
-                            AgeFlag = false,
-                            Code = 84,
-                            Name = "زوج عضوه شباب ورياضه",
-                            ReferenceFee = 0.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("ea06e3ec-0aaf-4f52-a160-7a60f4d1b1b5"),
-                            AgeFlag = false,
-                            Code = 40,
-                            Name = "ابن فوق 25 سنه استثناء",
-                            ReferenceFee = 22.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("e7738fc7-5229-426c-a330-277b63b301d2"),
-                            AgeFlag = false,
-                            Code = 85,
-                            Name = "ابنه فوق 25 سنة استثناء",
-                            ReferenceFee = 22.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("79cda6aa-5794-4a72-b70e-7435fd3e02d7"),
-                            AgeFlag = false,
-                            Code = 86,
-                            Name = "ابن فوق ال 25 استثناء تخفيض",
-                            ReferenceFee = 11.0m
-                        },
-                        new
-                        {
-                            Id = new Guid("21a0b93e-b81a-4dca-9a2d-97414015e992"),
-                            AgeFlag = false,
-                            Code = 87,
-                            Name = "ابنه فوق ال 25 استثناء تخفيض",
-                            ReferenceFee = 11.0m
-                        });
+                    b.ToTable("RefCodes");
                 });
 
             modelBuilder.Entity("ClubModels.Models.GeneralCodes.ReligionCode", b =>
@@ -1683,32 +233,12 @@ namespace ClubAPI.Migrations
                     b.HasIndex("Code")
                         .IsUnique();
 
-                    b.ToTable("religionCodes", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("5ee4ce09-ff48-4127-88f3-2ecc9d832f0a"),
-                            Code = 1,
-                            Name = "مسلم/ة"
-                        },
-                        new
-                        {
-                            Id = new Guid("4e11b66c-8c42-4639-a91d-6b8d83d86cd7"),
-                            Code = 2,
-                            Name = "مسيحى/ة"
-                        },
-                        new
-                        {
-                            Id = new Guid("ea0a357a-a5fe-4310-a219-0edcd3aa8430"),
-                            Code = 3,
-                            Name = "أخرى"
-                        });
+                    b.ToTable("religionCodes");
                 });
 
             modelBuilder.Entity("ClubModels.Models.GeneralCodes.SectionCode", b =>
                 {
-                    b.Property<Guid>("Identifier")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier")
                         .HasColumnName("SectionId");
@@ -1725,14 +255,15 @@ namespace ClubAPI.Migrations
                     b.Property<bool>("Donation")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("Id")
-                        .HasColumnType("bit");
-
                     b.Property<bool>("Improve")
                         .HasColumnType("bit");
 
                     b.Property<bool>("Init")
                         .HasColumnType("bit");
+
+                    b.Property<bool>("IsId")
+                        .HasColumnType("bit")
+                        .HasColumnName("Id");
 
                     b.Property<bool>("Maintenance")
                         .HasColumnType("bit");
@@ -1775,1718 +306,12 @@ namespace ClubAPI.Migrations
                     b.Property<bool>("Worker")
                         .HasColumnType("bit");
 
-                    b.HasKey("Identifier");
+                    b.HasKey("Id");
 
                     b.HasIndex("Code")
                         .IsUnique();
 
-                    b.ToTable("sectionCodes", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Identifier = new Guid("d5e0c048-d78f-43e7-b811-eacf90569a11"),
-                            Annual = false,
-                            Code = 1,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "عضوية زائرة",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("7cb2dfe6-d214-42a0-a639-a9e626ecbb1e"),
-                            Annual = false,
-                            Code = 2,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "رئيس مجس الإدارة",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("08bc35d3-b658-4e36-ad8e-41e8ea8111b3"),
-                            Annual = false,
-                            Code = 6,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "رئاسة الهيئة",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("0ee39414-b979-4793-975f-3fc8bc3ddddf"),
-                            Annual = false,
-                            Code = 7,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "ورش",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("a72bb318-c83e-4fe5-89fb-2d91262f38dc"),
-                            Annual = false,
-                            Code = 8,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "مطابع",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("f52bbeb6-e0e9-4b18-8da3-1911acf83cfa"),
-                            Annual = false,
-                            Code = 3,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "معاشات",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("c73d30f4-4908-4a1a-ad13-405c8f5cf993"),
-                            Annual = false,
-                            Code = 4,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "مستشار الوزير",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("a6dc5b48-67db-4a26-9205-3cb8ea5f4a68"),
-                            Annual = false,
-                            Code = 5,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "مترو",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("c610f69c-bb44-48fc-b3b6-ac0355f5dcb2"),
-                            Annual = false,
-                            Code = 9,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "ابو زعبل",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("cd62f919-1901-4e11-8983-cf61e7ae2911"),
-                            Annual = false,
-                            Code = 10,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "التبين",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("ffcd9db6-e01f-4239-a340-3e70c3ab5d2f"),
-                            Annual = false,
-                            Code = 11,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "ديزل القاهره",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("41ec20d0-c492-4b93-afb3-d2ffa543ae2a"),
-                            Annual = false,
-                            Code = 12,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "فرز القاهره",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("46eb5f88-f222-4f6e-b1b4-667c35ce71d6"),
-                            Annual = false,
-                            Code = 13,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "هندسه السكه",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("c02c704d-a475-4be0-88ea-f66cfcd0aa5c"),
-                            Annual = false,
-                            Code = 14,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "منطقه القاهره",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("a78e1059-8d0c-4191-93d4-b009658d5ced"),
-                            Annual = false,
-                            Code = 15,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "حركه",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("e7b2e57f-d401-4a28-aa45-773c3a0307cd"),
-                            Annual = false,
-                            Code = 21,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "الوحدات المتحركة",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("86f5ea25-dc44-402e-b3e9-a4bc6aa12d3d"),
-                            Annual = false,
-                            Code = 16,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "عباسية",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("ab8a6f4a-34aa-4ccb-a1c5-db3e8ced6ff4"),
-                            Annual = false,
-                            Code = 20,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "بولاق الدكرور",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("621dc6bd-d113-4721-8505-6fb81b1c0a26"),
-                            Annual = false,
-                            Code = 25,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "الاشارات",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("80f821ef-0eb0-4611-870c-f50f10fb225a"),
-                            Annual = false,
-                            Code = 26,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "المركز الطبي",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("3a802710-2ae0-4803-9630-9c1761cc7cf9"),
-                            Annual = false,
-                            Code = 27,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "ادارة مالية",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("0dc94d17-605d-4e98-9cbf-02cc82287061"),
-                            Annual = false,
-                            Code = 28,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "الخدمات المشتركه",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("7838f77f-a101-49c9-b8b3-4f4a611d3992"),
-                            Annual = false,
-                            Code = 29,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "ادارة المحطات",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("b8211d60-24de-413a-81db-307f744d02c3"),
-                            Annual = false,
-                            Code = 30,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "المنشأت",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("4d86058a-8d38-416d-aa09-d5690579417c"),
-                            Annual = false,
-                            Code = 31,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "الكبارى",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("45d9fd16-892b-4575-baf6-e98cc54d6a27"),
-                            Annual = false,
-                            Code = 32,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "التشغيل",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("32792757-c916-4567-bff5-f67ee2fa33b3"),
-                            Annual = false,
-                            Code = 33,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "المسافات الطويلة",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("96728ab8-ed48-4ce2-8faa-6a540859b23b"),
-                            Annual = false,
-                            Code = 34,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "المسافات القصيرة",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("88551076-4e79-4ebe-b13b-1f44a835d34b"),
-                            Annual = false,
-                            Code = 35,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "خدمه العملاء",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("2d580936-44d0-46bd-b80d-9647c49ee1ca"),
-                            Annual = false,
-                            Code = 40,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "ابي غاطس",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("ab3a8eaf-4292-4be4-89df-35cd47de7a29"),
-                            Annual = false,
-                            Code = 41,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "د.طرة",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("74153a71-74d3-4083-b90f-df2d716b11cd"),
-                            Annual = false,
-                            Code = 42,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "د.بولاق",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("83cb08a0-f618-46f2-bf2a-47ff40a83ce1"),
-                            Annual = false,
-                            Code = 43,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "السلامه و الجوده",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("9e39bf4d-4101-4fcb-9ad6-9cb9ca2cecca"),
-                            Annual = false,
-                            Code = 44,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "مخازن",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("57b1ee02-116d-44fe-897c-ded5b31e4867"),
-                            Annual = false,
-                            Code = 52,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "مخازن",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("b18675bb-934c-4a71-a399-4b5ccfdf836e"),
-                            Annual = false,
-                            Code = 54,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "مخازن",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("f4056bab-7e63-4c07-a0a4-1c4485dc07ea"),
-                            Annual = false,
-                            Code = 61,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "ابى غاطس",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("705668f0-b995-4779-bb4c-5a4a37919872"),
-                            Annual = false,
-                            Code = 63,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "مراقب ابراج",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("e67fe84d-2952-4ec5-888d-41cb9e5f566c"),
-                            Annual = false,
-                            Code = 64,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "الموارد البشرية",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("b9994ccb-2ff2-4300-804d-3f4a85642596"),
-                            Annual = false,
-                            Code = 70,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "البنيه الاساسيه",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("dba99fe3-5006-4cd6-838b-46f47ab99b24"),
-                            Annual = false,
-                            Code = 0,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "0",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("fe7b823e-914a-4d16-943d-e0af65299c66"),
-                            Annual = false,
-                            Code = 73,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "كهرباء السبتية",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("4a785eeb-0b0e-43a5-b8cb-d017f3830781"),
-                            Annual = false,
-                            Code = 75,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "قطاع البضائع",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("db94ee0e-5756-413b-8a3d-7f501a9bbb51"),
-                            Annual = false,
-                            Code = 76,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "دعم فنى",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("95067bb9-b07e-4cb5-86d1-d14a531f072e"),
-                            Annual = false,
-                            Code = 77,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "ديزل كوبري الليمون",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("170703ed-3503-4f5b-b8b4-f9142176e12d"),
-                            Annual = false,
-                            Code = 79,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "عربات الركاب",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("85a3c64a-6106-44df-837c-c712c5a12385"),
-                            Annual = false,
-                            Code = 80,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "سيارات",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("2bac4d63-cdd8-471d-bd6c-312c4fb388a8"),
-                            Annual = false,
-                            Code = 83,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "ابو راضى",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("689cd469-b920-438b-9778-1064c71a19ae"),
-                            Annual = false,
-                            Code = 84,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "المعدات الثقيلة",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("aa89b371-c234-42cf-80a2-99911c60a7c6"),
-                            Annual = false,
-                            Code = 85,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "شئون قانونيه",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("46a3ca2e-54fd-4d17-b41e-99880848809b"),
-                            Annual = false,
-                            Code = 86,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "اداره النقل",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("9419207d-c4f0-4cfe-b368-065c6edb69df"),
-                            Annual = false,
-                            Code = 87,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "عنابر بولاق",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("5f2d0008-39e9-4868-8dc2-7c18af14c386"),
-                            Annual = false,
-                            Code = 89,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "الاملاك",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("0371dad7-0d20-4661-9ec3-593b17b16117"),
-                            Annual = false,
-                            Code = 93,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "الفحص",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("27c56576-9e45-4d33-b012-29e89b2796f0"),
-                            Annual = false,
-                            Code = 94,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "قطاع الصيانه",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("650cc4a7-0415-44df-b93a-c70a00fa74ed"),
-                            Annual = false,
-                            Code = 95,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "حاسب الى",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("c409cd9d-49f5-4aa2-ac2c-b297ef773b2c"),
-                            Annual = false,
-                            Code = 99,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "مبيعات",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("f0d48b5d-0ba5-44dd-b8d2-d26cc9e3960d"),
-                            Annual = false,
-                            Code = 74,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "الادارة المركزية",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("8bfc30c7-3bd1-4e4c-8205-d6c5608bd14b"),
-                            Annual = false,
-                            Code = 60,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "نائب رئيس مجلس إداره",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("ea8ad93d-9816-411f-b75f-27172f3263a3"),
-                            Annual = false,
-                            Code = 17,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "م.الالكتروني",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("e829b8d2-71f0-4e30-8b64-b961d81a379f"),
-                            Annual = false,
-                            Code = 55,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "اداره التنسيق",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("b5c656fb-d338-487a-b79c-9b2a94d13b9d"),
-                            Annual = false,
-                            Code = 24,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "مدير هيئة سابق",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("a103fd87-4679-47f9-b962-f23c8ecf4000"),
-                            Annual = false,
-                            Code = 71,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "بنك القاهرة",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("8e9cdf45-c951-4076-9608-4e34eb874b7e"),
-                            Annual = false,
-                            Code = 18,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "المشروعات والتطوير",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("2ac92fb5-a0bd-45cc-a6d2-eb7cc28ae2ba"),
-                            Annual = false,
-                            Code = 51,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "مؤقته",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("89080a94-5f0a-46cc-a416-3bacb51044c4"),
-                            Annual = false,
-                            Code = 66,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "اداره السيارات",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("841a2a53-f8cd-4d26-882f-8c968ccaa53b"),
-                            Annual = false,
-                            Code = 19,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "موسميه",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("c0126381-e254-4f76-bcf3-589dcb03357f"),
-                            Annual = false,
-                            Code = 90,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "ديزل الزقازيق",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("efc2d9dc-e0a4-4897-bd65-6c366cd0d0cf"),
-                            Annual = false,
-                            Code = 50,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "الادارة القانونية",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("05e86262-b9cf-41c2-8d16-32d0eb1fa1e0"),
-                            Annual = false,
-                            Code = 88,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "اداره الهيئه",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        },
-                        new
-                        {
-                            Identifier = new Guid("8c12a4d5-bd28-472d-8b3a-8750745975b6"),
-                            Annual = false,
-                            Code = 81,
-                            ComPenalty = false,
-                            Donation = false,
-                            Id = false,
-                            Improve = false,
-                            Init = false,
-                            Maintenance = false,
-                            Name = "رئيس الشئون القانونية",
-                            Office = false,
-                            Penalty = false,
-                            Player = false,
-                            Pool = false,
-                            Post = false,
-                            Reg = false,
-                            ReserveFee = false,
-                            River = false,
-                            Society = false,
-                            Stamp = false,
-                            Worker = false
-                        });
+                    b.ToTable("sectionCodes");
                 });
 
             modelBuilder.Entity("ClubModels.Models.GeneralCodes.TitleCode", b =>
@@ -3509,27 +334,7 @@ namespace ClubAPI.Migrations
                     b.HasIndex("Code")
                         .IsUnique();
 
-                    b.ToTable("titleCodes", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("118bc7ee-d5d0-4b08-98a8-0bc51494f4ba"),
-                            Code = 1,
-                            Name = "السيد/ة"
-                        },
-                        new
-                        {
-                            Id = new Guid("95f32e89-54d4-40fb-a61c-4b2c11a35043"),
-                            Code = 2,
-                            Name = "أستاذ/ة"
-                        },
-                        new
-                        {
-                            Id = new Guid("da0b2927-37f0-4bd8-9038-75662ea78bbe"),
-                            Code = 3,
-                            Name = "دكتور/ة"
-                        });
+                    b.ToTable("titleCodes");
                 });
 
             modelBuilder.Entity("ClubModels.Models.GeneralCodes.TransferCode", b =>
@@ -3552,51 +357,299 @@ namespace ClubAPI.Migrations
                     b.HasIndex("Code")
                         .IsUnique();
 
-                    b.ToTable("TransCodes", (string)null);
+                    b.ToTable("TransCodes");
+                });
 
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("7ac5674c-c3a0-4610-92fe-14189e54c2bb"),
-                            Code = 1,
-                            Name = "بلوغ السن القانونية"
-                        },
-                        new
-                        {
-                            Id = new Guid("2fd40f35-a9d9-4940-909a-9b113803a834"),
-                            Code = 2,
-                            Name = "الزواج"
-                        },
-                        new
-                        {
-                            Id = new Guid("50904027-59a8-484a-95fa-e613aeea51a3"),
-                            Code = 3,
-                            Name = "الطلاق"
-                        },
-                        new
-                        {
-                            Id = new Guid("feb59821-1e5c-4248-ad7a-b7b3a175eb5b"),
-                            Code = 4,
-                            Name = "الوفاة"
-                        },
-                        new
-                        {
-                            Id = new Guid("67484eff-1864-4a26-b5b1-34ebb9a68bf1"),
-                            Code = 5,
-                            Name = "التخرج"
-                        },
-                        new
-                        {
-                            Id = new Guid("fcbf248e-f616-473a-93ab-e0cd02292a35"),
-                            Code = 6,
-                            Name = "بناء على رغبة صاحب العضوية"
-                        },
-                        new
-                        {
-                            Id = new Guid("82630ad6-e01d-4cac-b113-44a1b8f993c1"),
-                            Code = 7,
-                            Name = "طبقاً للائحه"
-                        });
+            modelBuilder.Entity("ClubModels.Models.Member", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("MemberId");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<Guid>("BirthPlaceId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("Birthday")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("CardDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("CityId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("F_Lock")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("Gender")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("HasCard")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("IdNo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("JobAddress")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<Guid>("JobId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("JobPhone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MSCode")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("M_Lock")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("MartialStatusId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("MemberEndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("MemberNo")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("MemberOrderDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("MemberOrderNo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("MemberRenewDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("MembershipId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<Guid>("NationalityID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Notes")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<string>("PersonalPhone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Pic")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<Guid>("QualId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ReligionId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("SectionId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("TMPFLG")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("Title")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BirthPlaceId");
+
+                    b.HasIndex("CityId");
+
+                    b.HasIndex("Gender");
+
+                    b.HasIndex("IdNo")
+                        .IsUnique();
+
+                    b.HasIndex("JobId");
+
+                    b.HasIndex("MartialStatusId");
+
+                    b.HasIndex("MembershipId");
+
+                    b.HasIndex("NationalityID");
+
+                    b.HasIndex("QualId");
+
+                    b.HasIndex("ReligionId");
+
+                    b.HasIndex("SectionId");
+
+                    b.HasIndex("Title");
+
+                    b.ToTable("members");
+                });
+
+            modelBuilder.Entity("ClubModels.Models.Member", b =>
+                {
+                    b.HasOne("ClubModels.Models.GeneralCodes.CityCode", "BirthPlace")
+                        .WithMany()
+                        .HasForeignKey("BirthPlaceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ClubModels.Models.GeneralCodes.CityCode", "CityCode")
+                        .WithMany("Members")
+                        .HasForeignKey("CityId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ClubModels.Models.GeneralCodes.GenderCode", "GenderCode")
+                        .WithMany("Members")
+                        .HasForeignKey("Gender")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ClubModels.Models.GeneralCodes.JobCode", "JobCode")
+                        .WithMany("Members")
+                        .HasForeignKey("JobId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ClubModels.Models.GeneralCodes.MartialStatusCode", "MartialStatusCode")
+                        .WithMany("Members")
+                        .HasForeignKey("MartialStatusId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ClubModels.Models.GeneralCodes.MembershipCode", "MembershipCode")
+                        .WithMany("Members")
+                        .HasForeignKey("MembershipId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ClubModels.Models.GeneralCodes.NationalityCode", "NationalityCode")
+                        .WithMany("Members")
+                        .HasForeignKey("NationalityID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ClubModels.Models.GeneralCodes.QualificationCode", "QualificationCode")
+                        .WithMany("Members")
+                        .HasForeignKey("QualId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ClubModels.Models.GeneralCodes.ReligionCode", "ReligionCode")
+                        .WithMany("Members")
+                        .HasForeignKey("ReligionId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ClubModels.Models.GeneralCodes.SectionCode", "SectionCode")
+                        .WithMany("Members")
+                        .HasForeignKey("SectionId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ClubModels.Models.GeneralCodes.TitleCode", "TitleCode")
+                        .WithMany("Members")
+                        .HasForeignKey("Title")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("BirthPlace");
+
+                    b.Navigation("CityCode");
+
+                    b.Navigation("GenderCode");
+
+                    b.Navigation("JobCode");
+
+                    b.Navigation("MartialStatusCode");
+
+                    b.Navigation("MembershipCode");
+
+                    b.Navigation("NationalityCode");
+
+                    b.Navigation("QualificationCode");
+
+                    b.Navigation("ReligionCode");
+
+                    b.Navigation("SectionCode");
+
+                    b.Navigation("TitleCode");
+                });
+
+            modelBuilder.Entity("ClubModels.Models.GeneralCodes.CityCode", b =>
+                {
+                    b.Navigation("Members");
+                });
+
+            modelBuilder.Entity("ClubModels.Models.GeneralCodes.GenderCode", b =>
+                {
+                    b.Navigation("Members");
+                });
+
+            modelBuilder.Entity("ClubModels.Models.GeneralCodes.JobCode", b =>
+                {
+                    b.Navigation("Members");
+                });
+
+            modelBuilder.Entity("ClubModels.Models.GeneralCodes.MartialStatusCode", b =>
+                {
+                    b.Navigation("Members");
+                });
+
+            modelBuilder.Entity("ClubModels.Models.GeneralCodes.MembershipCode", b =>
+                {
+                    b.Navigation("Members");
+                });
+
+            modelBuilder.Entity("ClubModels.Models.GeneralCodes.NationalityCode", b =>
+                {
+                    b.Navigation("Members");
+                });
+
+            modelBuilder.Entity("ClubModels.Models.GeneralCodes.QualificationCode", b =>
+                {
+                    b.Navigation("Members");
+                });
+
+            modelBuilder.Entity("ClubModels.Models.GeneralCodes.ReligionCode", b =>
+                {
+                    b.Navigation("Members");
+                });
+
+            modelBuilder.Entity("ClubModels.Models.GeneralCodes.SectionCode", b =>
+                {
+                    b.Navigation("Members");
+                });
+
+            modelBuilder.Entity("ClubModels.Models.GeneralCodes.TitleCode", b =>
+                {
+                    b.Navigation("Members");
                 });
 #pragma warning restore 612, 618
         }

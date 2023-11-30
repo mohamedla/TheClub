@@ -2,6 +2,7 @@
 using ClubAPI.ActionFilter;
 using ClubAPI.ActionFilter.GeneralCodes;
 using ClubContracts;
+using ClubEntities.DataTransferObjects.ReferenceCodes;
 using ClubEntities.DataTransferObjects.ReligionCodes;
 using ClubModels.Models.GeneralCodes;
 using Microsoft.AspNetCore.Mvc;
@@ -28,8 +29,8 @@ namespace ClubAPI.Controllers.GeneralCodes
         public async Task<IActionResult> GetAllReligions()
         {
             var religions = await _repository.ReligionCode.GetAllAsync(false);
-
-            return Ok(religions);
+            var religionsDTO = _mapper.Map<IEnumerable<ReligionCodeDTO>>(religions);
+            return Ok(religionsDTO);
         }
 
         [HttpPost("", Name = nameof(AddReligion))]

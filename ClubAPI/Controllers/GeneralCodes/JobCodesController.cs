@@ -2,6 +2,7 @@
 using ClubAPI.ActionFilter;
 using ClubAPI.ActionFilter.GeneralCodes;
 using ClubContracts;
+using ClubEntities.DataTransferObjects.CityCodes;
 using ClubEntities.DataTransferObjects.JobCodes;
 using ClubModels.Models.GeneralCodes;
 using Microsoft.AspNetCore.Mvc;
@@ -28,8 +29,8 @@ namespace ClubAPI.Controllers.GeneralCodes
         public async Task<IActionResult> GetAllJobs()
         {
             var jobs = await _repository.JobCode.GetAllAsync(false);
-
-            return Ok(jobs);
+            var jobsDTO = _mapper.Map<IEnumerable<JobCodeDTO>>(jobs);
+            return Ok(jobsDTO);
         }
 
         [HttpPost("", Name = nameof(AddJob))]

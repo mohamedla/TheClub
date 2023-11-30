@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cGNcKmtA2BNhYXQop4YbvPhjdtn7CLAwgULznojOP3GImY+3TfLVaFbZ5OPdpCI+AOAz2tNu/lVJH3gJN+ofzA==",
+  "dgSpecHash": "9d5R/GRQPMstLDAr/7R/SWTcK7BWI3i1xkg2AmDqo16dZeGlhMyEpjs0ujEbrlpF7UpvBnrrI41cm2lBXrgKig==",
   "success": true,
-  "projectFilePath": "D:\\WorkSpace\\Repos\\GitHup\\CSharpWeb\\TheClub\\ClubAPI\\ClubAPI.csproj",
+  "projectFilePath": "D:\\WorkSpace\\Repos\\GitHup\\TheClub\\ClubAPI\\ClubAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
