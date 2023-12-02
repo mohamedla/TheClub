@@ -6,7 +6,14 @@
 @inject IMapper Mapper
 @inject NavigationManager navigationManager
 
-<h3> <a href="/membermeta"><Icon Name="IconName.ArrowLeftSquare" Color="IconColor.Dark"></Icon></a> Member Data</h3>
+@if(IsNew)
+{
+    <h3>Add New Member</h3>
+}
+else
+{
+    <h3> <a href="/membermeta"><Icon Name="IconName.ArrowLeftSquare" Color="IconColor.Dark"></Icon></a> Member Data</h3>
+}
 
 <div>
     @if (LastResult != null)
@@ -325,17 +332,26 @@
         sectionList = await Http.GetFromJsonAsync<List<SectionCode>>("api/SectionCodes") ?? new List<SectionCode>();
         QualList = await Http.GetFromJsonAsync<List<QualificationCode>>("api/QualificationCodes") ?? new List<QualificationCode>();
 
-        var response = await Http.GetAsync($"api/Members/{Id}");
-        if (!response.IsSuccessStatusCode)
+        if(Id == "0")
         {
-            LastResult = new StreamReader(response.Content.ReadAsStream()).ReadToEnd();
-            CallType = AlertColor.Danger;
+            member = new();
+            IsNew = true;
         }
         else
         {
-            member = JsonConvert.DeserializeObject<MemberDataDTO>(await response.Content.ReadAsStringAsync());
-            LastResult = member.Name;
+            var response = await Http.GetAsync($"api/Members/{Id}");
+            if (!response.IsSuccessStatusCode)
+            {
+                LastResult = new StreamReader(response.Content.ReadAsStream()).ReadToEnd();
+                CallType = AlertColor.Danger;
+            }
+            else
+            {
+                member = JsonConvert.DeserializeObject<MemberDataDTO>(await response.Content.ReadAsStringAsync());
+                LastResult = member.Name;
+            }
         }
+
         StateHasChanged();
     }
 
